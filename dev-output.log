@@ -1,0 +1,1539 @@
+
+> frontend@0.1.0 dev
+> next dev
+
+[32m✔[0m [33mConsole Ninja[0m extension is connected to [33mNext.js[0m, see [36mhttps://tinyurl.com/2vt8jxzw[0m
+▲ Next.js 16.2.3 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://192.168.1.4:3000
+- Environments: .env
+✓ Ready in 1190ms
+⚠ Console Ninja Turbopack support is a PRO feature, [33mcurrently available to community users while in preview[0m
+
+○ Compiling /c/[chatbotId]/[chatId] ...
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+FATAL ERROR: Committing semi space failed. Allocation failed - JavaScript heap out of memory
+
+
+
+
+
+#
+
+<--- Last few GCs --->
+<--- Last few GCs --->
+<--- Last few GCs --->
+<--- Last few GCs --->
+<--- Last few GCs --->
+<--- Last few GCs --->
+<--- Last few GCs --->
+<--- Last few GCs --->
+<--- Last few GCs --->
+<--- Last few GCs --->
+<--- Last few GCs --->
+<--- Last few GCs --->
+<--- Last few GCs --->
+<--- Last few GCs --->
+<--- Last few GCs --->
+<--- Last few GCs --->
+<--- Last few GCs --->
+
+<--- Last few GCs --->
+<--- Last few GCs --->
+<--- Last few GCs --->
+<--- Last few GCs --->
+<--- Last few GCs --->
+
+
+# Fatal process out of memory: Re-embedded builtins: set permissions
+----- Native stack trace -----
+
+#
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<--- Last few GCs --->
+
+
+
+
+
+
+<--- Last few GCs --->
+<--- Last few GCs --->
+
+
+# Fatal process out of memory: Re-embedded builtins: set permissions
+<--- Last few GCs --->
+
+<--- Last few GCs --->
+[29556:0000018A930B7000]    12390 ms: Scavenge 8.7 (11.3) -> 7.5 (9.0) MB, pooled: 2 MB, 22.38 / 0.00 ms  (average mu = 1.000, current mu = 1.000) allocation failure; 
+[34232:000002BD8C8E5000]    15704 ms: Scavenge 8.7 (11.3) -> 7.4 (9.3) MB, pooled: 2 MB, 292.44 / 0.00 ms  (average mu = 1.000, current mu = 1.000) allocation failure; 
+[5840:000001D945B1A000]     1755 ms: Scavenge 5.1 (6.8) -> 4.8 (9.6) MB, pooled: 0 MB, 1.40 / 0.00 ms  (average mu = 1.000, current mu = 1.000) allocation failure; 
+#
+[33884:000002B1BB736000]     4914 ms: Scavenge 8.7 (11.3) -> 7.4 (9.3) MB, pooled: 2 MB, 4.72 / 0.00 ms  (average mu = 1.000, current mu = 1.000) allocation failure; 
+FATAL ERROR: Zone Allocation failed - process out of memory
+[27716:0000020D6B153000]     8510 ms: Scavenge 8.7 (11.8) -> 7.4 (10.0) MB, pooled: 2 MB, 126.82 / 0.00 ms  (average mu = 1.000, current mu = 1.000) allocation failure; 
+[34728:0000016C9DA3F000]    10428 ms: Scavenge 8.7 (11.3) -> 7.5 (9.3) MB, pooled: 2 MB, 3.91 / 0.00 ms  (average mu = 1.000, current mu = 1.000) allocation failure; 
+
+[33684:0000025EAD603000]    21383 ms: Scavenge 8.7 (11.5) -> 7.4 (9.5) MB, pooled: 2 MB, 22.51 / 0.00 ms  (average mu = 1.000, current mu = 1.000) allocation failure; 
+[1276:0000021A58449000]     4233 ms: Scavenge 8.7 (11.3) -> 7.4 (11.0) MB, pooled: 0 MB, 3.35 / 0.00 ms  (average mu = 1.000, current mu = 1.000) allocation failure; 
+[13956:00000211CFE2F000]     3498 ms: Scavenge 5.1 (5.8) -> 4.8 (9.3) MB, pooled: 0 MB, 2.29 / 0.00 ms  (average mu = 1.000, current mu = 1.000) allocation failure; 
+[36052:0000014424F79000]     3807 ms: Scavenge 8.7 (11.3) -> 7.4 (11.3) MB, pooled: 0 MB, 228.96 / 0.00 ms  (average mu = 1.000, current mu = 1.000) allocation failure; 
+[35088:000001F9404F7000]     5481 ms: Scavenge 3.9 (4.8) -> 3.6 (5.1) MB, pooled: 1 MB, 2.95 / 0.00 ms  (average mu = 1.000, current mu = 1.000) allocation failure; 
+[22948:0000022EFBD9D000]     1182 ms: Scavenge 5.1 (6.8) -> 4.8 (9.3) MB, pooled: 0 MB, 2.13 / 0.00 ms  (average mu = 1.000, current mu = 1.000) allocation failure; 
+[24616:00000292EE535000]     4876 ms: Scavenge 6.0 (7.2) -> 5.3 (10.0) MB, pooled: 0 MB, 2.89 / 0.00 ms  (average mu = 1.000, current mu = 1.000) allocation failure; 
+FATAL ERROR: Committing semi space failed. Allocation failed - JavaScript heap out of memory
+[23592:000001F3DFAF1000]     7771 ms: Scavenge 5.1 (7.1) -> 4.8 (9.6) MB, pooled: 0 MB, 1.65 / 0.00 ms  (average mu = 1.000, current mu = 1.000) allocation failure; 
+[9524:0000018C84A45000]     4893 ms: Scavenge 8.7 (11.3) -> 7.4 (9.0) MB, pooled: 2 MB, 654.52 / 0.00 ms  (average mu = 1.000, current mu = 1.000) allocation failure; 
+[28888:0000024D63981000]     4047 ms: Scavenge 5.1 (7.1) -> 4.8 (9.8) MB, pooled: 0 MB, 1.90 / 0.00 ms  (average mu = 1.000, current mu = 1.000) allocation failure; 
+[1036:00000193D9857000]     6780 ms: Scavenge 6.4 (8.5) -> 6.2 (11.0) MB, pooled: 0 MB, 1.58 / 0.00 ms  (average mu = 1.000, current mu = 1.000) allocation failure; 
+[30448:000001A24D6C4000]     2162 ms: Scavenge 5.1 (7.1) -> 4.8 (9.8) MB, pooled: 0 MB, 1.39 / 0.00 ms  (average mu = 1.000, current mu = 1.000) allocation failure; 
+[29252:000002C3DC841000]     3239 ms: Scavenge 6.5 (8.8) -> 6.1 (8.8) MB, pooled: 0 MB, 1.33 / 0.00 ms  (average mu = 1.000, current mu = 1.000) task; 
+
+<--- Last few GCs --->
+
+ 1: 00007FF7AF47C44F node::OnFatalError+1343
+
+[33884:000002B1BB736000]     6113 ms: Scavenge 9.5 (10.5) -> 8.8 (17.5) MB, pooled: 0 MB, 4.64 / 0.00 ms  (average mu = 1.000, current mu = 1.000) allocation failure; 
+
+----- Native stack trace -----
+#
+
+
+----- Native stack trace -----
+[27716:0000020D6B153000]     8828 ms: Scavenge 9.5 (10.5) -> 8.8 (17.8) MB, pooled: 0 MB, 2.49 / 0.00 ms  (average mu = 1.000, current mu = 1.000) allocation failure; 
+
+[34728:0000016C9DA3F000]    10486 ms: Scavenge 9.5 (10.3) -> 8.8 (17.0) MB, pooled: 0 MB, 4.06 / 0.00 ms  (average mu = 1.000, current mu = 1.000) allocation failure; 
+
+
+[5840:000001D945B1A000]    12031 ms: Mark-Compact (reduce) 6.9 (11.1) -> 5.6 (7.8) MB, pooled: 0 MB, 2151.39 / 0.00 ms  (+ 1.5 ms in 28 steps since start of marking, biggest step 0.2 ms, walltime since start of marking 2153 ms) (average mu = 0.821, curren
+[1276:0000021A58449000]     6486 ms: Scavenge 9.5 (12.3) -> 8.9 (17.3) MB, pooled: 0 MB, 3.75 / 0.00 ms  (average mu = 1.000, current mu = 1.000) allocation failure; 
+[13956:00000211CFE2F000]    12532 ms: Mark-Compact (reduce) 6.8 (10.8) -> 5.6 (7.6) MB, pooled: 0 MB, 473.96 / 0.00 ms  (+ 0.0 ms in 1 steps since start of marking, biggest step 0.0 ms, walltime since start of marking 905 ms) (average mu = 0.962, current 
+[1036:00000193D9857000]    13626 ms: Scavenge 10.0 (12.8) -> 9.0 (10.8) MB, pooled: 2 MB, 1.76 / 0.00 ms  (average mu = 1.000, current mu = 1.000) allocation failure; 
+[36052:0000014424F79000]     4942 ms: Scavenge 9.5 (12.3) -> 8.9 (17.3) MB, pooled: 0 MB, 2.63 / 0.00 ms  (average mu = 1.000, current mu = 1.000) allocation failure; 
+[23592:000001F3DFAF1000]    17192 ms: Mark-Compact (reduce) 6.8 (11.1) -> 5.6 (7.8) MB, pooled: 0 MB, 603.34 / 0.00 ms  (+ 85.5 ms in 2 steps since start of marking, biggest step 84.5 ms, walltime since start of marking 912 ms) (average mu = 0.958, curren
+[35088:000001F9404F7000]    10086 ms: Scavenge 5.1 (5.8) -> 4.8 (7.6) MB, pooled: 0 MB, 4341.81 / 0.00 ms  (average mu = 1.000, current mu = 1.000) allocation failure; 
+
+[22948:0000022EFBD9D000]    10771 ms: Mark-Compact (reduce) 6.9 (10.8) -> 5.6 (7.8) MB, pooled: 0 MB, 423.31 / 0.00 ms  (+ 190.4 ms in 6 steps since start of marking, biggest step 151.7 ms, walltime since start of marking 855 ms) (average mu = 0.943, curr
+[9524:0000018C84A45000]     4957 ms: Scavenge 9.5 (10.3) -> 8.9 (17.5) MB, pooled: 0 MB, 2.96 / 0.00 ms  (average mu = 1.000, current mu = 1.000) allocation failure; 
+[30448:000001A24D6C4000]    12482 ms: Mark-Compact (reduce) 6.8 (10.8) -> 5.6 (8.1) MB, pooled: 0 MB, 2198.43 / 0.00 ms  (+ 1.7 ms in 31 steps since start of marking, biggest step 0.2 ms, walltime since start of marking 2201 ms) (average mu = 0.813, curre
+[28888:0000024D63981000]    12281 ms: Mark-Compact (reduce) 6.9 (10.8) -> 5.6 (7.6) MB, pooled: 0 MB, 100.94 / 0.00 ms  (+ 1.7 ms in 30 steps since start of marking, biggest step 0.2 ms, walltime since start of marking 107 ms) (average mu = 0.992, current
+----- Native stack trace -----
+[29252:000002C3DC841000]    12435 ms: Mark-Compact (reduce) 6.5 (9.1) -> 5.6 (7.8) MB, pooled: 0 MB, 81.56 / 0.00 ms  (+ 2.4 ms in 3 steps since start of marking, biggest step 1.0 ms, walltime since start of marking 962 ms) (average mu = 0.993, current mu
+[4232:0000027DE9234000]    10284 ms: Scavenge 6.5 (8.5) -> 6.2 (10.7) MB, pooled: 0 MB, 1.93 / 0.00 ms  (average mu = 1.000, current mu = 1.000) allocation failure; 
+[20044:0000011279F00000]    17738 ms: Scavenge 8.7 (11.3) -> 7.5 (9.5) MB, pooled: 2 MB, 0.89 / 0.00 ms  (average mu = 1.000, current mu = 1.000) allocation failure; 
+
+ 2: 00007FF7B00C6217 v8::Function::NewInstance+423
+[13380:000001B534187000]     6453 ms: Scavenge 9.5 (12.5) -> 8.8 (17.3) MB, pooled: 0 MB, 1737.97 / 0.00 ms  (average mu = 1.000, current mu = 1.000) allocation failure; 
+
+
+#
+
+
+
+[4812:000001A605D45000]     9473 ms: Scavenge 6.7 (8.7) -> 5.9 (8.2) MB, pooled: 0 MB, 149.03 / 0.00 ms  (average mu = 1.000, current mu = 1.000) allocation failure; 
+#
+----- Native stack trace -----
+FATAL ERROR: Zone Allocation failed - process out of memory
+
+FATAL ERROR: Committing semi space failed. Allocation failed - JavaScript heap out of memory
+FATAL ERROR: Committing semi space failed. Allocation failed - JavaScript heap out of memory
+FATAL ERROR: Committing semi space failed. Allocation failed - JavaScript heap out of memory
+FATAL ERROR: Zone Allocation failed - process out of memory
+[1036:00000193D9857000]    26874 ms: Scavenge 9.9 (10.8) -> 9.4 (13.0) MB, pooled: 0 MB, 0.86 / 0.00 ms  (average mu = 1.000, current mu = 1.000) allocation failure; 
+
+FATAL ERROR: Zone Allocation failed - process out of memory
+
+
+FATAL ERROR: Committing semi space failed. Allocation failed - JavaScript heap out of memory
+[4232:0000027DE9234000]    18885 ms: Scavenge 10.0 (12.8) -> 9.0 (11.0) MB, pooled: 2 MB, 1016.17 / 0.00 ms  (average mu = 1.000, current mu = 1.000) allocation failure; 
+
+
+FATAL ERROR: Committing semi space failed. Allocation failed - JavaScript heap out of memory
+[36296:000001E46F755000]     7458 ms: Scavenge 6.7 (8.7) -> 5.8 (8.2) MB, pooled: 0 MB, 6.58 / 0.00 ms  (average mu = 1.000, current mu = 1.000) allocation failure; 
+ 3: 00007FF7AFEC6C07 v8::base::AddressSpaceReservation::AddressSpaceReservation+322071
+[13380:000001B534187000]    38518 ms: Scavenge 13.5 (18.5) -> 11.2 (14.5) MB, pooled: 5 MB, 6581.80 / 0.00 ms  (average mu = 1.000, current mu = 1.000) allocation failure; 
+ 1: 00007FF7AF3D0ECD node::MultiIsolatePlatform::DisposeIsolate+5341
+
+# Fatal JavaScript out of memory: MemoryChunk allocation failed during deserialization.
+[4812:000001A605D45000]    10851 ms: Scavenge 6.4 (8.2) -> 6.2 (10.7) MB, pooled: 0 MB, 396.77 / 0.00 ms  (average mu = 1.000, current mu = 1.000) allocation failure; 
+FATAL ERROR: Committing semi space failed. Allocation failed - JavaScript heap out of memory
+ 1: 00007FF7AF47C44F node::OnFatalError+1343
+FATAL ERROR: Committing semi space failed. Allocation failed - JavaScript heap out of memory
+FATAL ERROR: Committing semi space failed. Allocation failed - JavaScript heap out of memory
+----- Native stack trace -----
+# Fatal JavaScript out of memory: MemoryChunk allocation failed during deserialization.
+FATAL ERROR: Zone Allocation failed - process out of memory
+FATAL ERROR: Zone Allocation failed - process out of memory
+FATAL ERROR: Zone Allocation failed - process out of memory
+
+----- Native stack trace -----
+----- Native stack trace -----
+----- Native stack trace -----
+FATAL ERROR: Zone Allocation failed - process out of memory
+----- Native stack trace -----
+
+----- Native stack trace -----
+ 1: 00007FF7AF47C44F node::OnFatalError+1343
+FATAL ERROR: Zone Allocation failed - process out of memory
+----- Native stack trace -----
+[4232:0000027DE9234000]    23817 ms: Scavenge 10.2 (11.0) -> 9.5 (13.3) MB, pooled: 0 MB, 22.05 / 0.00 ms  (average mu = 1.000, current mu = 1.000) allocation failure; 
+FATAL ERROR: Zone Allocation failed - process out of memory
+[36296:000001E46F755000]    14687 ms: Scavenge 6.5 (8.5) -> 6.3 (8.7) MB, pooled: 0 MB, 312.86 / 0.00 ms  (average mu = 1.000, current mu = 1.000) allocation failure; 
+ 2: 00007FF7B08336B6 v8::base::FatalOOM+54
+#
+FATAL ERROR: Committing semi space failed. Allocation failed - JavaScript heap out of memory
+ 4: 00007FF7AFE5F62B v8::platform::DefaultPlatform::CurrentClockTimeMillis+490523
+
+FATAL ERROR: Zone Allocation failed - process out of memory
+----- Native stack trace -----
+ 1: 00007FF7AF3D0ECD node::MultiIsolatePlatform::DisposeIsolate+5341
+
+----- Native stack trace -----
+----- Native stack trace -----
+ 2: 00007FF7B00C6217 v8::Function::NewInstance+423
+----- Native stack trace -----
+
+#
+----- Native stack trace -----
+----- Native stack trace -----
+----- Native stack trace -----
+<--- Last few GCs --->
+
+
+
+----- Native stack trace -----
+
+
+----- Native stack trace -----
+----- Native stack trace -----
+
+ 2: 00007FF7B00C6217 v8::Function::NewInstance+423
+
+----- Native stack trace -----
+FATAL ERROR: Zone Allocation failed - process out of memory
+----- Native stack trace -----
+
+
+ 5: 00007FF7AFE8799A v8::base::AddressSpaceReservation::AddressSpaceReservation+63402
+FATAL ERROR: Committing semi space failed. Allocation failed - JavaScript heap out of memory
+ 3: 00007FF7B00C61F6 v8::Function::NewInstance+390
+
+ 2: 00007FF7B08336B6 v8::base::FatalOOM+54
+----- Native stack trace -----
+FATAL ERROR: Zone Allocation failed - process out of memory
+
+ 3: 00007FF7AFA3FC46 v8::SnapshotCreator::GetIsolate+56566
+
+ 1: 00007FF7AF47C44F node::OnFatalError+1343
+----- Native stack trace -----
+
+
+
+
+ 1: 00007FF7AF47C44F node::OnFatalError+1343
+
+ 1: 00007FF7AF47C44F node::OnFatalError+1343
+----- Native stack trace -----
+ 1: 00007FF7AF47C44F node::OnFatalError+1343
+ 3: 00007FF7AFEC6C07 v8::base::AddressSpaceReservation::AddressSpaceReservation+322071
+
+ 1: 00007FF7AF47C44F node::OnFatalError+1343
+FATAL ERROR: Zone Allocation failed - process out of memory
+
+
+
+FATAL ERROR: Zone Allocation failed - process out of memory
+ 6: 00007FF7AFEC8FE6 v8::base::AddressSpaceReservation::AddressSpaceReservation+331254
+----- Native stack trace -----
+ 4: 00007FF7AFF2D52E v8::CppHeap::CollectGarbageInYoungGenerationForTesting+111438
+ 3: 00007FF7B00C61F6 v8::Function::NewInstance+390
+
+ 1: 00007FF7AF47C44F node::OnFatalError+1343
+----- Native stack trace -----
+ 1: 00007FF7AF47C44F node::OnFatalError+1343
+ 1: 00007FF7AF47C44F node::OnFatalError+1343
+----- Native stack trace -----
+
+ 5: 00007FF7AFF60B5F SSL_CTX_set_default_read_buffer_len+41247
+ 4: 00007FF7AFF2D52E v8::CppHeap::CollectGarbageInYoungGenerationForTesting+111438
+
+[7052:000001783FFB4000]     8820 ms: Scavenge 6.5 (9.0) -> 6.3 (9.2) MB, pooled: 0 MB, 1.39 / 0.00 ms  (average mu = 1.000, current mu = 1.000) allocation failure; 
+ 2: 00007FF7B00C6217 v8::Function::NewInstance+423
+ 1: 00007FF7AF47C44F node::OnFatalError+1343
+ 2: 00007FF7B00C6217 v8::Function::NewInstance+423
+ 2: 00007FF7B00C6217 v8::Function::NewInstance+423
+ 4: 00007FF7AFE5F62B v8::platform::DefaultPlatform::CurrentClockTimeMillis+490523
+
+ 2: 00007FF7B00C6217 v8::Function::NewInstance+423
+----- Native stack trace -----
+ 1: 00007FF7AF47C44F node::OnFatalError+1343
+ 2: 00007FF7B00C6217 v8::Function::NewInstance+423
+ 7: 00007FF7AFEC8636 v8::base::AddressSpaceReservation::AddressSpaceReservation+328774
+
+ 4: 00007FF7AFB7476A EC_KEY_METHOD_set_verify+250890
+ 1: 00007FF7AF47C44F node::OnFatalError+1343
+ 1: 00007FF7AF47C44F node::OnFatalError+1343
+ 1: 00007FF7AF3D0ECD node::MultiIsolatePlatform::DisposeIsolate+5341
+
+ 5: 00007FF7AFB81B2D EC_KEY_METHOD_set_verify+305101
+ 3: 00007FF7AFA3FC46 v8::SnapshotCreator::GetIsolate+56566
+ 1: 00007FF7AF3D0ECD node::MultiIsolatePlatform::DisposeIsolate+5341
+<--- Last few GCs --->
+ 2: 00007FF7B00C6217 v8::Function::NewInstance+423
+ 2: 00007FF7B00C6217 v8::Function::NewInstance+423
+ 2: 00007FF7B00C6217 v8::Function::NewInstance+423
+
+ 1: 00007FF7AF47C44F node::OnFatalError+1343
+
+ 1: 00007FF7AF47C44F node::OnFatalError+1343
+ 3: 00007FF7AFA3FC46 v8::SnapshotCreator::GetIsolate+56566
+ 5: 00007FF7AFE8799A v8::base::AddressSpaceReservation::AddressSpaceReservation+63402
+ 2: 00007FF7B00C6217 v8::Function::NewInstance+423
+ 3: 00007FF7AFA3FC46 v8::SnapshotCreator::GetIsolate+56566
+
+ 2: 00007FF7B00C6217 v8::Function::NewInstance+423
+ 2: 00007FF7B00C6217 v8::Function::NewInstance+423
+ 3: 00007FF7AFEC6C07 v8::base::AddressSpaceReservation::AddressSpaceReservation+322071
+ 8: 00007FF7AFED9582 v8::internal::StrongRootAllocatorBase::deallocate_impl+15858
+ 5: 00007FF7AFF60B5F SSL_CTX_set_default_read_buffer_len+41247
+ 2: 00007FF7B08336B6 v8::base::FatalOOM+54
+ 1: 00007FF7AF47C44F node::OnFatalError+1343
+ 6: 00007FF7AFB80FB4 EC_KEY_METHOD_set_verify+302164
+ 4: 00007FF7AFB50ABF EC_KEY_METHOD_set_verify+104287
+ 2: 00007FF7B08336B6 v8::base::FatalOOM+54
+ 6: 00007FF7AFF61612 SSL_CTX_set_default_read_buffer_len+43986
+ 3: 00007FF7AFA3FC46 v8::SnapshotCreator::GetIsolate+56566
+[7052:000001783FFB4000]    14660 ms: Scavenge 7.9 (10.0) -> 7.4 (9.3) MB, pooled: 1 MB, 1.28 / 0.00 ms  (average mu = 1.000, current mu = 1.000) allocation failure; 
+ 2: 00007FF7B00C6217 v8::Function::NewInstance+423
+ 3: 00007FF7AFA3FC46 v8::SnapshotCreator::GetIsolate+56566
+ 3: 00007FF7AFEC6C07 v8::base::AddressSpaceReservation::AddressSpaceReservation+322071
+[7052:000001783FFB4000]    20968 ms: Scavenge 9.2 (10.3) -> 8.8 (13.5) MB, pooled: 0 MB, 6186.42 / 0.00 ms  (average mu = 1.000, current mu = 1.000) allocation failure; 
+ 4: 00007FF7AFE5F62B v8::platform::DefaultPlatform::CurrentClockTimeMillis+490523
+ 3: 00007FF7AFA3FC46 v8::SnapshotCreator::GetIsolate+56566
+ 2: 00007FF7B00C6217 v8::Function::NewInstance+423
+ 4: 00007FF7AFB8445C EC_KEY_METHOD_set_verify+315644
+ 4: 00007FF7B00AD236 X509_STORE_set_get_issuer+672470
+ 6: 00007FF7AFEC8FE6 v8::base::AddressSpaceReservation::AddressSpaceReservation+331254
+ 3: 00007FF7AFA3FC46 v8::SnapshotCreator::GetIsolate+56566
+ 3: 00007FF7AFA3FC46 v8::SnapshotCreator::GetIsolate+56566
+ 1: 00007FF7AF47C44F node::OnFatalError+1343
+ 9: 00007FF7AFED90AB v8::internal::StrongRootAllocatorBase::deallocate_impl+14619
+ 6: 00007FF7AFF61612 SSL_CTX_set_default_read_buffer_len+43986
+ 3: 00007FF7B00C61F6 v8::Function::NewInstance+390
+ 3: 00007FF7AFEC6C07 v8::base::AddressSpaceReservation::AddressSpaceReservation+322071
+[33884:000002B1BB736000]     4914 ms: Scavenge 8.7 (11.3) -> 7.4 (9.3) MB, pooled: 2 MB, 4.72 / 0.00 ms  (average mu = 1.000, current mu = 1.000) allocation failure; 
+ 1: 00007FF7AF47C44F node::OnFatalError+1343
+ 2: 00007FF7B00C6217 v8::Function::NewInstance+423
+ 7: 00007FF7AFF61FF2 SSL_CTX_set_default_read_buffer_len+46514
+ 2: 00007FF7B00C6217 v8::Function::NewInstance+423
+ 4: 00007FF7AFE5F62B v8::platform::DefaultPlatform::CurrentClockTimeMillis+490523
+ 7: 00007FF7AFB86934 EC_KEY_METHOD_set_verify+325076
+ 5: 00007FF7AFB5492B EC_KEY_METHOD_set_verify+120267
+ 3: 00007FF7B00C61F6 v8::Function::NewInstance+390
+ 4: 00007FF7AF8F0433 SSL_CTX_get_client_CA_list+562227
+ 4: 00007FF7AF908E17 SSL_CTX_get_client_CA_list+663063
+ 3: 00007FF7AFA3FC46 v8::SnapshotCreator::GetIsolate+56566
+
+ 5: 00007FF7AFE3707E v8::platform::DefaultPlatform::CurrentClockTimeMillis+325230
+ 4: 00007FF7AF60114A X509_get0_tbs_sigalg+9818
+ 5: 00007FF7AFB81DE8 EC_KEY_METHOD_set_verify+305800
+ 7: 00007FF7AFEC8636 v8::base::AddressSpaceReservation::AddressSpaceReservation+328774
+ 5: 00007FF7AFB805D6 EC_KEY_METHOD_set_verify+299638
+ 3: 00007FF7AFA3FC46 v8::SnapshotCreator::GetIsolate+56566
+ 4: 00007FF7AF8D80D5 SSL_CTX_get_client_CA_list+463061
+ 5: 00007FF7AFE8799A v8::base::AddressSpaceReservation::AddressSpaceReservation+63402
+ 4: 00007FF7AF86CFD8 SSL_CTX_get_client_CA_list+24536
+ 4: 00007FF7AFE5F62B v8::platform::DefaultPlatform::CurrentClockTimeMillis+490523
+ 8: 00007FF7AFA5DE33 v8::internal::Version::GetSONAME+122307
+ 4: 00007FF7AFEC6C07 v8::base::AddressSpaceReservation::AddressSpaceReservation+322071
+ 2: 00007FF7B00C6217 v8::Function::NewInstance+423
+ 8: 00007FF7AFB91D4F EC_KEY_METHOD_set_verify+371183
+10: 00007FF7B135F8ED v8::base::UnsignedDivisionByConstant<unsigned __int64>+2794685
+ 4: 00007FF7AFEC6C07 v8::base::AddressSpaceReservation::AddressSpaceReservation+322071
+[33884:000002B1BB736000]     6113 ms: Scavenge 9.5 (10.5) -> 8.8 (17.5) MB, pooled: 0 MB, 4.64 / 0.00 ms  (average mu = 1.000, current mu = 1.000) allocation failure; 
+ 5: 00007FF7AF8B54F2 SSL_CTX_get_client_CA_list+320754
+ 4: 00007FF7B00AD236 X509_STORE_set_get_issuer+672470
+ 5: 00007FF7AFDB12BA v8::Promise::MarkAsSilent+545562
+ 6: 00007FF7AFB80F6E EC_KEY_METHOD_set_verify+302094
+ 3: 00007FF7AFA3FC46 v8::SnapshotCreator::GetIsolate+56566
+ 6: 00007FF7AFB58D9B EC_KEY_METHOD_set_verify+137787
+ 2: 00007FF7B00C6217 v8::Function::NewInstance+423
+FATAL ERROR: Zone Allocation failed - process out of memory
+ 6: 00007FF7AFB81D9B EC_KEY_METHOD_set_verify+305723
+ 3: 00007FF7AFEC6C07 v8::base::AddressSpaceReservation::AddressSpaceReservation+322071
+ 5: 00007FF7AF88ABB8 SSL_CTX_get_client_CA_list+146360
+ 5: 00007FF7AF86D3EC SSL_CTX_get_client_CA_list+25580
+ 6: 00007FF7AFEC96A2 v8::base::AddressSpaceReservation::AddressSpaceReservation+332978
+ 5: 00007FF7AF8920D0 SSL_CTX_get_client_CA_list+176336
+11: 00007FF7AFEC46D0 v8::base::AddressSpaceReservation::AddressSpaceReservation+312544
+ 8: 00007FF7AFED9582 v8::internal::StrongRootAllocatorBase::deallocate_impl+15858
+ 5: 00007FF7B00AD637 X509_STORE_set_get_issuer+673495
+ 3: 00007FF7AFA3FC46 v8::SnapshotCreator::GetIsolate+56566
+ 7: 00007FF7AFF61FF2 SSL_CTX_set_default_read_buffer_len+46514
+ 4: 00007FF7AFE5F62B v8::platform::DefaultPlatform::CurrentClockTimeMillis+490523
+ 9: 00007FF7B00F10B6 v8::Isolate::Initialize+662
+ 3: 00007FF7AFA3FC46 v8::SnapshotCreator::GetIsolate+56566
+ 5: 00007FF7AFE8799A v8::base::AddressSpaceReservation::AddressSpaceReservation+63402
+ 6: 00007FF7AFEC8FE6 v8::base::AddressSpaceReservation::AddressSpaceReservation+331254
+ 4: 00007FF7B08600F5 v8::base::ieee754::tanh+152677
+ 8: 00007FF7AFA5DE33 v8::internal::Version::GetSONAME+122307
+ 5: 00007FF7AFE78E5A v8::base::AddressSpaceReservation::AddressSpaceReservation+3178
+ 4: 00007FF7B00B27FE X509_STORE_set_get_issuer+694430
+ 9: 00007FF7AFB7B51B EC_KEY_METHOD_set_verify+278971
+ 5: 00007FF7AFE78E5A v8::base::AddressSpaceReservation::AddressSpaceReservation+3178
+
+ 6: 00007FF7AF8923DF SSL_CTX_get_client_CA_list+177119
+ 6: 00007FF7AF8B5393 SSL_CTX_get_client_CA_list+320403
+----- Native stack trace -----
+ 7: 00007FF7AFEC8657 v8::base::AddressSpaceReservation::AddressSpaceReservation+328807
+ 6: 00007FF7AFDB0BE0 v8::Promise::MarkAsSilent+543808
+ 7: 00007FF7AFB80C29 EC_KEY_METHOD_set_verify+301257
+ 5: 00007FF7B08608FB v8::base::ieee754::tanh+154731
+ 9: 00007FF7AFED90AB v8::internal::StrongRootAllocatorBase::deallocate_impl+14619
+ 6: 00007FF7AF88C626 SSL_CTX_get_client_CA_list+153126
+ 7: 00007FF7AFEC8636 v8::base::AddressSpaceReservation::AddressSpaceReservation+328774
+ 4: 00007FF7AFDC1746 v8::Promise::MarkAsSilent+612262
+ 6: 00007FF7AF8953C8 SSL_CTX_get_client_CA_list+189384
+ 6: 00007FF7AFEC8FE6 v8::base::AddressSpaceReservation::AddressSpaceReservation+331254
+ 7: 00007FF7AFB58263 EC_KEY_METHOD_set_verify+134915
+ 6: 00007FF7AFB5538D EC_KEY_METHOD_set_verify+122925
+ 7: 00007FF7AFB80F6E EC_KEY_METHOD_set_verify+302094
+12: 00007FF7AFEBD834 v8::base::AddressSpaceReservation::AddressSpaceReservation+284228
+ 5: 00007FF7AFE8799A v8::base::AddressSpaceReservation::AddressSpaceReservation+63402
+10: 00007FF7AF58A22D node::SetIsolateUpForNode+749
+ 9: 00007FF7B00F10B6 v8::Isolate::Initialize+662
+ 6: 00007FF7AFE78F1C v8::base::AddressSpaceReservation::AddressSpaceReservation+3372
+ 5: 00007FF7B00ACDA3 X509_STORE_set_get_issuer+671299
+10: 00007FF7AFB7AA1A EC_KEY_METHOD_set_verify+276154
+ 8: 00007FF7AFB5F047 EC_KEY_METHOD_set_verify+163047
+ 6: 00007FF7AFE78F1C v8::base::AddressSpaceReservation::AddressSpaceReservation+3372
+ 7: 00007FF7AF8CB10A SSL_CTX_get_client_CA_list+409866
+ 7: 00007FF7AF894F45 SSL_CTX_get_client_CA_list+188229
+ 7: 00007FF7AFEC8636 v8::base::AddressSpaceReservation::AddressSpaceReservation+328774
+FATAL ERROR: Zone Allocation failed - process out of memory
+
+ 8: 00007FF7AFED9582 v8::internal::StrongRootAllocatorBase::deallocate_impl+15858
+ 6: 00007FF7AF86DBB1 SSL_CTX_get_client_CA_list+27569
+ 8: 00007FF7AFB80C29 EC_KEY_METHOD_set_verify+301257
+10: 00007FF7B135F8ED v8::base::UnsignedDivisionByConstant<unsigned __int64>+2794685
+ 5: 00007FF7AFDC1CDD v8::Promise::MarkAsSilent+613693
+ 8: 00007FF7AFED9582 v8::internal::StrongRootAllocatorBase::deallocate_impl+15858
+ 7: 00007FF7AF895F63 SSL_CTX_get_client_CA_list+192355
+ 4: 00007FF7B00C3A14 X509_STORE_set_get_issuer+764596
+ 7: 00007FF7AFB54A51 EC_KEY_METHOD_set_verify+120561
+ 7: 00007FF7AF88A1C5 SSL_CTX_get_client_CA_list+143813
+ 7: 00007FF7AFDE3901 v8::Promise::MarkAsSilent+751969
+ 8: 00007FF7AFB893F0 EC_KEY_METHOD_set_verify+336016
+ 5: 00007FF7B00C37D0 X509_STORE_set_get_issuer+764016
+13: 00007FF7AF3CF0CA node::GetNodeReport+99354
+ 6: 00007FF7AFEC8FE6 v8::base::AddressSpaceReservation::AddressSpaceReservation+331254
+11: 00007FF7AF2E5B73 RSA_meth_get_flags+222691
+10: 00007FF7AF58A22D node::SetIsolateUpForNode+749
+ 7: 00007FF7AFE7980B v8::base::AddressSpaceReservation::AddressSpaceReservation+5659
+ 6: 00007FF7B00AE5E6 X509_STORE_set_get_issuer+677510
+11: 00007FF7AFB6E117 EC_KEY_METHOD_set_verify+224695
+ 9: 00007FF7AFB51876 EC_KEY_METHOD_set_verify+107798
+ 7: 00007FF7AFE7980B v8::base::AddressSpaceReservation::AddressSpaceReservation+5659
+----- Native stack trace -----
+ 8: 00007FF7AF8A0DCB SSL_CTX_get_client_CA_list+237003
+ 8: 00007FF7AF8A58F2 SSL_CTX_get_client_CA_list+256242
+ 1: 00007FF7AF47C44F node::OnFatalError+1343
+ 9: 00007FF7AFED90AB v8::internal::StrongRootAllocatorBase::deallocate_impl+14619
+ 8: 00007FF7AFDC27F5 v8::Promise::MarkAsSilent+616533
+ 9: 00007FF7AFB80696 EC_KEY_METHOD_set_verify+299830
+ 7: 00007FF7AF917B43 SSL_CTX_get_client_CA_list+723779
+ 9: 00007FF7AFB893F0 EC_KEY_METHOD_set_verify+336016
+11: 00007FF7AFEC46D0 v8::base::AddressSpaceReservation::AddressSpaceReservation+312544
+ 8: 00007FF7AF895F63 SSL_CTX_get_client_CA_list+192355
+ 6: 00007FF7AFDC96A9 v8::Promise::MarkAsSilent+644873
+ 9: 00007FF7AFED90AB v8::internal::StrongRootAllocatorBase::deallocate_impl+14619
+ 8: 00007FF7AF8CB868 SSL_CTX_get_client_CA_list+411752
+ 8: 00007FF7AFED9582 v8::internal::StrongRootAllocatorBase::deallocate_impl+15858
+ 8: 00007FF7AFB58D9B EC_KEY_METHOD_set_verify+137787
+14: 00007FF7AF3CD8B0 node::GetNodeReport+93184
+ 6: 00007FF7AFB4AA7F EC_KEY_METHOD_set_verify+79647
+11: 00007FF7AF2E5B73 RSA_meth_get_flags+222691
+12: 00007FF7AF2E4F09 RSA_meth_get_flags+219513
+ 7: 00007FF7AFB75537 EC_KEY_METHOD_set_verify+254423
+ 8: 00007FF7AFE50A61 v8::platform::DefaultPlatform::CurrentClockTimeMillis+430161
+ 7: 00007FF7AFEC8636 v8::base::AddressSpaceReservation::AddressSpaceReservation+328774
+12: 00007FF7AFB6D2E4 EC_KEY_METHOD_set_verify+221060
+10: 00007FF7AFB501DB EC_KEY_METHOD_set_verify+102011
+ 8: 00007FF7AFE50A61 v8::platform::DefaultPlatform::CurrentClockTimeMillis+430161
+
+ 2: 00007FF7B00C6217 v8::Function::NewInstance+423
+10: 00007FF7B135F8ED v8::base::UnsignedDivisionByConstant<unsigned __int64>+2794685
+ 9: 00007FF7AFDCE158 v8::Promise::MarkAsSilent+663992
+ 9: 00007FF7AF918F36 SSL_CTX_get_client_CA_list+728886
+ 8: 00007FF7AF915A4A SSL_CTX_get_client_CA_list+715338
+10: 00007FF7AFB80696 EC_KEY_METHOD_set_verify+299830
+12: 00007FF7AFEDEF1A X509_STORE_set_cleanup+5098
+10: 00007FF7AFB81D9B EC_KEY_METHOD_set_verify+305723
+10: 00007FF7B135F8ED v8::base::UnsignedDivisionByConstant<unsigned __int64>+2794685
+ 7: 00007FF7AFDBAB55 v8::Promise::MarkAsSilent+584629
+ 9: 00007FF7AF8B6FB6 SSL_CTX_get_client_CA_list+327606
+ 9: 00007FF7AFED90AB v8::internal::StrongRootAllocatorBase::deallocate_impl+14619
+ 9: 00007FF7AF8A0DCB SSL_CTX_get_client_CA_list+237003
+ 9: 00007FF7AFB58263 EC_KEY_METHOD_set_verify+134915
+ 7: 00007FF7AFB6B6A6 EC_KEY_METHOD_set_verify+213830
+ 9: 00007FF7AF8CB868 SSL_CTX_get_client_CA_list+411752
+13: 00007FF7AF2EEA90 RSA_meth_get_flags+259328
+12: 00007FF7AF2E4F09 RSA_meth_get_flags+219513
+15: 00007FF7B012D81B uv_run+1867
+ 9: 00007FF7AFEB6913 v8::base::AddressSpaceReservation::AddressSpaceReservation+255779
+ 8: 00007FF7AFED9582 v8::internal::StrongRootAllocatorBase::deallocate_impl+15858
+ 8: 00007FF7AFB9267A EC_KEY_METHOD_set_verify+373530
+13: 00007FF7AFB6C5D2 EC_KEY_METHOD_set_verify+217714
+ 9: 00007FF7AFEB6913 v8::base::AddressSpaceReservation::AddressSpaceReservation+255779
+10: 00007FF7AF917C50 SSL_CTX_get_client_CA_list+724048
+ 1: 00007FF7AF47C44F 
+11: 00007FF7AFEC46D0 v8::base::AddressSpaceReservation::AddressSpaceReservation+312544
+ 9: 00007FF7B0039ECF X509_STORE_set_get_issuer+200559
+13: 00007FF7AFEEAD78 uv_timer_set_repeat+19096
+10: 00007FF7AFDCCA44 v8::Promise::MarkAsSilent+658084
+10: 00007FF7AF8A0DCB SSL_CTX_get_client_CA_list+237003
+ 8: 00007FF7AFDB836B v8::Promise::MarkAsSilent+574411
+10: 00007FF7AF8A09A2 SSL_CTX_get_client_CA_list+235938
+10: 00007FF7AF8B7DB7 SSL_CTX_get_client_CA_list+331191
+10: 00007FF7AFB5B1D2 EC_KEY_METHOD_set_verify+147058
+16: 00007FF7B012D38F uv_run+703
+14: 00007FF7B011B1A6 uv_thread_detach+150
+11: 00007FF7AFB80F6E EC_KEY_METHOD_set_verify+302094
+11: 00007FF7AFB81D9B EC_KEY_METHOD_set_verify+305723
+10: 00007FF7B135F8ED v8::base::UnsignedDivisionByConstant<unsigned __int64>+2794685
+ 8: 00007FF7AFB81D9B EC_KEY_METHOD_set_verify+305723
+ 3: 00007FF7AFA3FC46 v8::SnapshotCreator::GetIsolate+56566
+11: 00007FF7AFEC46D0 v8::base::AddressSpaceReservation::AddressSpaceReservation+312544
+ 9: 00007FF7AFED90AB v8::internal::StrongRootAllocatorBase::deallocate_impl+14619
+13: 00007FF7AF2EEA90 RSA_meth_get_flags+259328
+11: 00007FF7AFB4F516 EC_KEY_METHOD_set_verify+98742
+10: 00007FF7AFEB667E v8::base::AddressSpaceReservation::AddressSpaceReservation+255118
+ 9: 00007FF7AFB72A84 EC_KEY_METHOD_set_verify+243492
+14: 00007FF7AFB6C27A EC_KEY_METHOD_set_verify+216858
+12: 00007FF7AFB7A078 EC_KEY_METHOD_set_verify+273688
+10: 00007FF7AFEB667E v8::base::AddressSpaceReservation::AddressSpaceReservation+255118
+ 2: 00007FF7B00C6217 
+11: 00007FF7AF915A4A SSL_CTX_get_client_CA_list+715338
+11: 00007FF7AF8CC18A SSL_CTX_get_client_CA_list+414090
+12: 00007FF7AFEDEF1A X509_STORE_set_cleanup+5098
+12: 00007FF7AFB86934 EC_KEY_METHOD_set_verify+325076
+10: 00007FF7AF91752B SSL_CTX_get_client_CA_list+722219
+12: 00007FF7AFB80F6E EC_KEY_METHOD_set_verify+302094
+ 9: 00007FF7AFB80F6E EC_KEY_METHOD_set_verify+302094
+17: 00007FF7AF58ECAF node::DecodeWrite+351
+10: 00007FF7B135F8ED v8::base::UnsignedDivisionByConstant<unsigned __int64>+2794685
+14: 00007FF7B011B1A6 uv_thread_detach+150
+15: 00007FF7AFB678A9 EC_KEY_METHOD_set_verify+197961
+11: 00007FF7AFDCD3B3 v8::Promise::MarkAsSilent+660499
+10: 00007FF7AFB7B51B EC_KEY_METHOD_set_verify+278971
+11: 00007FF7AFEB5468 v8::base::AddressSpaceReservation::AddressSpaceReservation+250488
+ 3: 00007FF7AFA3FC46 
+12: 00007FF7B0039ECF X509_STORE_set_get_issuer+200559
+12: 00007FF7AF8A0DCB SSL_CTX_get_client_CA_list+237003
+14: 00007FF7AFF0242A uv_timer_set_repeat+115018
+11: 00007FF7AF918F36 SSL_CTX_get_client_CA_list+728886
+11: 00007FF7AFEB5468 v8::base::AddressSpaceReservation::AddressSpaceReservation+250488
+15: 00007FF7B137B0B3 v8::base::UnsignedDivisionByConstant<unsigned __int64>+2907267
+ 4: 00007FF7B0A64FF0 v8::base::DiyFp::Multiply+40368
+11: 00007FF7AFB5B7D1 EC_KEY_METHOD_set_verify+148593
+11: 00007FF7AFEC46D0 v8::base::AddressSpaceReservation::AddressSpaceReservation+312544
+11: 00007FF7AF8A2955 SSL_CTX_get_client_CA_list+244053
+ 9: 00007FF7AFDB77DF v8::Promise::MarkAsSilent+571455
+12: 00007FF7AFEBD834 v8::base::AddressSpaceReservation::AddressSpaceReservation+284228
+13: 00007FF7AFB6E090 EC_KEY_METHOD_set_verify+224560
+ 5: 00007FF7B087EAC9 v8::internal::compiler::CompilationDependencies::FieldTypeDependencyOffTheRecord+107193
+13: 00007FF7AFEEAD78 uv_timer_set_repeat+19096
+12: 00007FF7AFDBAB55 v8::Promise::MarkAsSilent+584629
+13: 00007FF7AFB84DBE EC_KEY_METHOD_set_verify+318046
+11: 00007FF7B08A684F v8::platform::DefaultJobHandle::UpdatePriority+591
+15: 00007FF7AFDAFE6E v8::Promise::MarkAsSilent+540366
+10: 00007FF7AFDB5FEF v8::Promise::MarkAsSilent+565327
+11: 00007FF7AFEC46D0 v8::base::AddressSpaceReservation::AddressSpaceReservation+312544
+14: 00007FF7AFB92613 EC_KEY_METHOD_set_verify+373427
+13: 00007FF7AF3CF0CA node::GetNodeReport+99354
+13: 00007FF7AFDB8DCB v8::Promise::MarkAsSilent+577067
+14: 00007FF7AFB81D9B EC_KEY_METHOD_set_verify+305723
+12: 00007FF7AF3CCD8E node::GetNodeReport+90334
+18: 00007FF7AF2E5501 RSA_meth_get_flags+221041
+16: 00007FFC44A0E8D7 BaseThreadInitThunk+23
+15: 00007FF7B137B0B3 v8::base::UnsignedDivisionByConstant<unsigned __int64>+2907267
+12: 00007FF7AFEB53EA v8::base::AddressSpaceReservation::AddressSpaceReservation+250362
+11: 00007FF7AFB7AA1A EC_KEY_METHOD_set_verify+276154
+13: 00007FF7AFB92E42 EC_KEY_METHOD_set_verify+375522
+12: 00007FF7AF917C50 SSL_CTX_get_client_CA_list+724048
+16: 00007FF7B0043C4F X509_STORE_set_get_issuer+240879
+12: 00007FF7AFEB53EA v8::base::AddressSpaceReservation::AddressSpaceReservation+250362
+ 4: 00007FF7AF908E17 
+13: 00007FF7AF91752B SSL_CTX_get_client_CA_list+722219
+13: 00007FF7AF8A09A2 SSL_CTX_get_client_CA_list+235938
+ 6: 00007FF7AF937E06 X509_ACERT_get0_notBefore+1782
+14: 00007FF7AFF06EEA uv_timer_set_repeat+134154
+12: 00007FF7AF8A1DFE SSL_CTX_get_client_CA_list+241150
+12: 00007FF7AFEDF19B X509_STORE_set_cleanup+5739
+12: 00007FF7AFB56931 EC_KEY_METHOD_set_verify+128465
+10: 00007FF7AFB80C29 EC_KEY_METHOD_set_verify+301257
+14: 00007FF7AFB72915 EC_KEY_METHOD_set_verify+243125
+16: 00007FF7AFDD67BC v8::Promise::MarkAsSilent+698396
+13: 00007FF7AF915A4A SSL_CTX_get_client_CA_list+715338
+13: 00007FF7AF8B5361 SSL_CTX_get_client_CA_list+320353
+11: 00007FF7AFB893F0 EC_KEY_METHOD_set_verify+336016
+19: 00007FF7AF2EEA90 RSA_meth_get_flags+259328
+15: 00007FF7AFB72A84 EC_KEY_METHOD_set_verify+243492
+13: 00007FF7AFA7B508 v8::internal::Version::GetSONAME+242840
+13: 00007FF7AFB54805 EC_KEY_METHOD_set_verify+119973
+12: 00007FF7AFEBD834 v8::base::AddressSpaceReservation::AddressSpaceReservation+284228
+14: 00007FF7AF3CD8B0 node::GetNodeReport+93184
+17: 00007FFC465EC48C RtlUserThreadStart+44
+11: 00007FF7AFDAD296 v8::Promise::MarkAsSilent+529142
+16: 00007FFC44A0E8D7 BaseThreadInitThunk+23
+13: 00007FF7AFEDEE45 X509_STORE_set_cleanup+4885
+12: 00007FF7AFB6E117 EC_KEY_METHOD_set_verify+224695
+17: 00007FF7B0046A51 X509_STORE_set_get_issuer+252657
+13: 00007FF7AFA7B493 v8::internal::Version::GetSONAME+242723
+ 5: 00007FF7AF8B54F2 
+ 7: 00007FF7AF9156FF SSL_CTX_get_client_CA_list+714495
+14: 00007FF7AF8A2955 SSL_CTX_get_client_CA_list+244053
+14: 00007FF7B08A684F v8::platform::DefaultJobHandle::UpdatePriority+591
+15: 00007FF7AFBF2A75 v8::RegExp::GetFlags+142357
+14: 00007FF7AFDB9150 v8::Promise::MarkAsSilent+577968
+15: 00007FF7AFB80F6E EC_KEY_METHOD_set_verify+302094
+13: 00007FF7B011B1A6 uv_thread_detach+150
+15: 00007FF7AFB7B51B EC_KEY_METHOD_set_verify+278971
+17: 00007FF7AFDD8B66 v8::Promise::MarkAsSilent+707526
+14: 00007FF7B0039ECF X509_STORE_set_get_issuer+200559
+15: 00007FF7B012D81B uv_run+1867
+12: 00007FF7B004AF9F X509_STORE_set_get_issuer+270399
+14: 00007FF7AF88A1C5 SSL_CTX_get_client_CA_list+143813
+14: 00007FF7AFA792DC v8::internal::Version::GetSONAME+234092
+13: 00007FF7AF3CF0CA node::GetNodeReport+99354
+17: 00007FFC465EC48C RtlUserThreadStart+44
+14: 00007FF7AFA7B508 v8::internal::Version::GetSONAME+242840
+14: 00007FF7AFB58D9B EC_KEY_METHOD_set_verify+137787
+12: 00007FF7AFB80696 EC_KEY_METHOD_set_verify+299830
+20: 00007FF7B011B1A6 uv_thread_detach+150
+13: 00007FF7AFB6D2E4 EC_KEY_METHOD_set_verify+221060
+18: 00007FF7B00CF6D3 v8::ScriptCompiler::CompileFunction+1011
+14: 00007FF7AFA792DC v8::internal::Version::GetSONAME+234092
+16: 00007FF7AFB7B51B EC_KEY_METHOD_set_verify+278971
+15: 00007FF7AF3CCD8E node::GetNodeReport+90334
+ 8: 00007FF7B0042553 X509_STORE_set_get_issuer+234995
+15: 00007FF7AF8A1DFE SSL_CTX_get_client_CA_list+241150
+ 6: 00007FF7AF8B5393 
+15: 00007FF7AFDB8DCB v8::Promise::MarkAsSilent+577067
+16: 00007FF7AFBF29FD v8::RegExp::GetFlags+142237
+16: 00007FF7AFB7B352 EC_KEY_METHOD_set_verify+278514
+14: 00007FF7B137B0B3 v8::base::UnsignedDivisionByConstant<unsigned __int64>+2907267
+15: 00007FF7AFA7EF86 v8::internal::Version::GetSONAME+257814
+15: 00007FF7AFB58263 EC_KEY_METHOD_set_verify+134915
+13: 00007FF7AFB81D9B EC_KEY_METHOD_set_verify+305723
+15: 00007FF7AF91752B SSL_CTX_get_client_CA_list+722219
+21: 00007FF7B137B0B3 v8::base::UnsignedDivisionByConstant<unsigned __int64>+2907267
+14: 00007FF7AF3CD8B0 node::GetNodeReport+93184
+15: 00007FF7AF8A58F2 SSL_CTX_get_client_CA_list+256242
+16: 00007FF7AFB7AA1A EC_KEY_METHOD_set_verify+276154
+15: 00007FF7AFA8055E v8::internal::Version::GetSONAME+263406
+19: 00007FF7AF4AC520 node::GetCurrentEnvironment+99920
+13: 00007FF7B00418B8 X509_STORE_set_get_issuer+231768
+14: 00007FF7AFB6C5D2 EC_KEY_METHOD_set_verify+217714
+15: 00007FF7AFA792DC v8::internal::Version::GetSONAME+234092
+16: 00007FF7B012D38F uv_run+703
+ 7: 00007FF7AF88A1C5 
+17: 00007FF7AFB7AA1A EC_KEY_METHOD_set_verify+276154
+18: 00007FF7AFDB4649 v8::Promise::MarkAsSilent+558761
+16: 00007FF7B011B1A6 uv_thread_detach+150
+16: 00007FF7AF8B5361 SSL_CTX_get_client_CA_list+320353
+ 9: 00007FF7B004462A X509_STORE_set_get_issuer+243402
+17: 00007FF7AFBFECBA v8::RegExp::GetFlags+192090
+16: 00007FF7AFDB9150 v8::Promise::MarkAsSilent+577968
+17: 00007FF7AFB70EE5 EC_KEY_METHOD_set_verify+236421
+15: 00007FFC44A0E8D7 BaseThreadInitThunk+23
+19: 00007FF7AFDAD62F v8::Promise::MarkAsSilent+530063
+17: 00007FF7AFB6E117 EC_KEY_METHOD_set_verify+224695
+16: 00007FF7B08A684F v8::platform::DefaultJobHandle::UpdatePriority+591
+17: 00007FF7AF58ECAF node::DecodeWrite+351
+14: 00007FF7B0044054 X509_STORE_set_get_issuer+241908
+16: 00007FF7AF8B6FB6 SSL_CTX_get_client_CA_list+327606
+14: 00007FF7AFB80F6E EC_KEY_METHOD_set_verify+302094
+22: 00007FFC44A0E8D7 BaseThreadInitThunk+23
+16: 00007FF7AFB57D04 EC_KEY_METHOD_set_verify+133540
+16: 00007FF7AFA7EF86 v8::internal::Version::GetSONAME+257814
+16: 00007FF7AFA79FC8 v8::internal::Version::GetSONAME+237400
+15: 00007FF7B012D81B uv_run+1867
+15: 00007FF7AFB6C27A EC_KEY_METHOD_set_verify+216858
+20: 00007FF7AF4AD0D2 node::GetCurrentEnvironment+102914
+18: 00007FF7AFB6E117 EC_KEY_METHOD_set_verify+224695
+16: 00007FF7AFA79D0D v8::internal::Version::GetSONAME+236701
+17: 00007FF7B137B0B3 v8::base::UnsignedDivisionByConstant<unsigned __int64>+2907267
+16: 00007FFC465EC48C RtlUserThreadStart+44
+18: 00007FF7AFB6D2E4 EC_KEY_METHOD_set_verify+221060
+17: 00007FF7AF88A1C5 SSL_CTX_get_client_CA_list+143813
+10: 00007FF7AFAC6631 v8::String::Utf8Value::~Utf8Value+182401
+20: 00007FF7AFDAD4A2 v8::Promise::MarkAsSilent+529666
+ 8: 00007FF7AF8A58F2 
+18: 00007FF7AFC01845 v8::RegExp::GetFlags+203237
+17: 00007FF7AFDBF37A v8::Promise::MarkAsSilent+603098
+18: 00007FF7AFB81C90 EC_KEY_METHOD_set_verify+305456
+17: 00007FF7AF3CCD8E node::GetNodeReport+90334
+18: 00007FF7AF2E5501 RSA_meth_get_flags+221041
+15: 00007FF7B0046A51 X509_STORE_set_get_issuer+252657
+17: 00007FF7AFA794BE v8::internal::Version::GetSONAME+234574
+17: 00007FF7AFB541FB EC_KEY_METHOD_set_verify+118427
+16: 00007FF7B012D38F uv_run+703
+17: 00007FF7AF8B7DB7 SSL_CTX_get_client_CA_list+331191
+23: 00007FFC465EC48C RtlUserThreadStart+44
+15: 00007FF7AFB80C29 EC_KEY_METHOD_set_verify+301257
+17: 00007FF7AFA79FC8 v8::internal::Version::GetSONAME+237400
+21: 00007FF7AF4AD596 node::GetCurrentEnvironment+104134
+18: 00007FFC44A0E8D7 BaseThreadInitThunk+23
+18: 00007FF7AF8A58F2 SSL_CTX_get_client_CA_list+256242
+11: 00007FF7AFAC472F v8::String::Utf8Value::~Utf8Value+174463
+19: 00007FF7AFB6C5D2 EC_KEY_METHOD_set_verify+217714
+18: 00007FF7B011B1A6 uv_thread_detach+150
+19: 00007FF7AFBFE0E4 v8::RegExp::GetFlags+189060
+18: 00007FF7AFA794BE v8::internal::Version::GetSONAME+234574
+21: 00007FF7B0049E9C X509_STORE_set_get_issuer+266044
+ 9: 00007FF7AF8B6FB6 
+19: 00007FF7AF2EEA90 RSA_meth_get_flags+259328
+19: 00007FF7AFB80FB4 EC_KEY_METHOD_set_verify+302164
+16: 00007FF7AFB678A9 EC_KEY_METHOD_set_verify+197961
+17: 00007FF7AFA57744 v8::internal::Version::GetSONAME+95956
+18: 00007FF7AFDB8DCB v8::Promise::MarkAsSilent+577067
+18: 00007FF7AFA7EF86 v8::internal::Version::GetSONAME+257814
+18: 00007FF7AFB58E0A EC_KEY_METHOD_set_verify+137898
+16: 00007FF7B00CF6D3 v8::ScriptCompiler::CompileFunction+1011
+19: 00007FF7AFB6D2E4 EC_KEY_METHOD_set_verify+221060
+17: 00007FF7AF58ECAF node::DecodeWrite+351
+16: 00007FF7AFB893F0 EC_KEY_METHOD_set_verify+336016
+18: 00007FF7AF8CC18A SSL_CTX_get_client_CA_list+414090
+17: 00007FF7B0043C4F X509_STORE_set_get_issuer+240879
+20: 00007FF7AFB6C5D2 EC_KEY_METHOD_set_verify+217714
+18: 00007FF7AFA74E41 v8::internal::Version::GetSONAME+216529
+22: 00007FF7AF58BD7B node::MultiIsolatePlatform::Create+923
+19: 00007FF7AF8B6FB6 SSL_CTX_get_client_CA_list+327606
+12: 00000178786F75FA 
+20: 00007FF7AFBFDF2D v8::RegExp::GetFlags+188621
+19: 00007FF7AFDB9150 v8::Promise::MarkAsSilent+577968
+19: 00007FFC465EC48C RtlUserThreadStart+44
+10: 00007FF7AF8B7DB7 
+20: 00007FF7AFB80C29 EC_KEY_METHOD_set_verify+301257
+20: 00007FF7AFB6C27A EC_KEY_METHOD_set_verify+216858
+20: 00007FF7B011B1A6 uv_thread_detach+150
+19: 00007FF7AFA79FC8 v8::internal::Version::GetSONAME+237400
+19: 00007FF7AFA7EF86 v8::internal::Version::GetSONAME+257814
+18: 00007FF7B0046A51 X509_STORE_set_get_issuer+252657
+20: 00007FF7AF8B7DB7 SSL_CTX_get_client_CA_list+331191
+21: 00007FF7AFB893F0 EC_KEY_METHOD_set_verify+336016
+21: 00007FF7AFB678A9 EC_KEY_METHOD_set_verify+197961
+19: 00007FF7B137B0B3 v8::base::UnsignedDivisionByConstant<unsigned __int64>+2907267
+19: 00007FF7AFB58263 EC_KEY_METHOD_set_verify+134915
+22: 00007FF7B0041931 X509_STORE_set_get_issuer+231889
+19: 00007FF7AF8A0DCB SSL_CTX_get_client_CA_list+237003
+17: 00007FF7AF499063 node::GetCurrentEnvironment+20883
+21: 00007FF7AFB6C27A EC_KEY_METHOD_set_verify+216858
+19: 00007FF7AFA62F82 v8::internal::Version::GetSONAME+143122
+11: 00007FF7AF8CC18A 
+18: 00007FF7AF40B416 node::MultiIsolatePlatform::DisposeIsolate+244262
+21: 00007FF7AFC03348 v8::RegExp::GetFlags+210152
+20: 00007FF7AFDB8DCB v8::Promise::MarkAsSilent+577067
+23: 00007FF7AF58BB5E node::MultiIsolatePlatform::Create+382
+17: 00007FF7AFB80696 EC_KEY_METHOD_set_verify+299830
+23: 00007FF7B0044054 X509_STORE_set_get_issuer+241908
+20: 00007FFC44A0E8D7 BaseThreadInitThunk+23
+21: 00007FF7B137B0B3 v8::base::UnsignedDivisionByConstant<unsigned __int64>+2907267
+18: 00007FF7AF49780E node::GetCurrentEnvironment+14654
+20: 00007FF7AF918F36 SSL_CTX_get_client_CA_list+728886
+20: 00007FF7AFA794BE v8::internal::Version::GetSONAME+234574
+20: 00007FF7AFB56CBA EC_KEY_METHOD_set_verify+129370
+18: 00007FF7AFB81D9B EC_KEY_METHOD_set_verify+305723
+19: 00007FF7AF4D726C node::Start+1052
+20: 00007FF7AFA79FC8 v8::internal::Version::GetSONAME+237400
+24: 00007FF7AF3BD221 node::GetNodeReport+25969
+22: 00007FF7AFB678A9 EC_KEY_METHOD_set_verify+197961
+20: 00007FF7AFF61BA9 SSL_CTX_set_default_read_buffer_len+45417
+12: 00007FF7AF8A0DCB 
+21: 00007FF7AF8CC18A SSL_CTX_get_client_CA_list+414090
+22: 00007FF7AFC0BF43 v8::RegExp::GetFlags+245987
+21: 00007FF7AFDB9150 v8::Promise::MarkAsSilent+577968
+19: 00007FF7B00CF6D3 v8::ScriptCompiler::CompileFunction+1011
+22: 00007FF7B0043C4F X509_STORE_set_get_issuer+240879
+22: 00007FF7AFB80696 EC_KEY_METHOD_set_verify+299830
+24: 00007FF7B0046A51 X509_STORE_set_get_issuer+252657
+22: 00007FFC44A0E8D7 BaseThreadInitThunk+23
+19: 0000027DA7DCF64D 
+21: 00007FFC465EC48C RtlUserThreadStart+44
+21: 00007FF7AF917C50 SSL_CTX_get_client_CA_list+724048
+21: 00007FF7AFA7EF86 v8::internal::Version::GetSONAME+257814
+21: 00007FF7AFB62F61 EC_KEY_METHOD_set_verify+179201
+19: 00007FF7AFB80F6E EC_KEY_METHOD_set_verify+302094
+20: 00007FF7B04F50C2 AES_cbc_encrypt+2546
+21: 00007FF7AFA794BE v8::internal::Version::GetSONAME+234574
+20: 00007FF7AF499063 node::GetCurrentEnvironment+20883
+25: 00007FF7AF3C548B node::GetNodeReport+59355
+23: 00007FF7B0043C4F X509_STORE_set_get_issuer+240879
+21: 00007FF7AFF61FF2 SSL_CTX_set_default_read_buffer_len+46514
+13: 00007FF7AF8A09A2 
+22: 00007FF7AF8A0DCB SSL_CTX_get_client_CA_list+237003
+22: 00007FF7AFDBAD3A v8::Promise::MarkAsSilent+585114
+25: 00007FF7B00CF6D3 v8::ScriptCompiler::CompileFunction+1011
+22: 00007FF7AFA79FC8 v8::internal::Version::GetSONAME+237400
+23: 00007FF7AFBEFBF1 v8::RegExp::GetFlags+130449
+23: 00007FF7B0046A51 X509_STORE_set_get_issuer+252657
+23: 00007FFC465EC48C RtlUserThreadStart+44
+22: 00007FF7AF915A4A SSL_CTX_get_client_CA_list+715338
+23: 00007FF7AFB81D9B EC_KEY_METHOD_set_verify+305723
+22: 00007FF7AFB52541 EC_KEY_METHOD_set_verify+111073
+20: 00007FF7AFB92E42 EC_KEY_METHOD_set_verify+375522
+21: 00007FF7B1368FF4 v8::base::UnsignedDivisionByConstant<unsigned __int64>+2833348
+22: 00007FF7AFA7EF86 v8::internal::Version::GetSONAME+257814
+21: 00007FF7AF49780E node::GetCurrentEnvironment+14654
+26: 00007FF7AF533DE0 node::SetCppgcReference+54912
+24: 00007FF7B0046A51 X509_STORE_set_get_issuer+252657
+22: 00007FF7AFA5DE33 v8::internal::Version::GetSONAME+122307
+14: 00007FF7AF8A2955 
+23: 00007FF7AF8A09A2 SSL_CTX_get_client_CA_list+235938
+24: 00007FF7AFBEF429 v8::RegExp::GetFlags+128457
+23: 00007FF7AFDB836B v8::Promise::MarkAsSilent+574411
+24: 00007FF7AFB80F6E EC_KEY_METHOD_set_verify+302094
+24: 00007FF7B00CF6D3 v8::ScriptCompiler::CompileFunction+1011
+26: 00007FF7AF4AC520 node::GetCurrentEnvironment+99920
+23: 00007FF7B0039ECF X509_STORE_set_get_issuer+200559
+23: 00007FF7AFA794BE v8::internal::Version::GetSONAME+234574
+23: 00007FF7AFB51AAD EC_KEY_METHOD_set_verify+108365
+21: 00007FF7AFB72915 EC_KEY_METHOD_set_verify+243125
+22: 00007FFC44A0E8D7 BaseThreadInitThunk+23
+23: 00007FF7AFA79FC8 v8::internal::Version::GetSONAME+237400
+22: 000001A63E30F64D 
+27: 00007FF7AF58A85E node::CreateEnvironment+510
+25: 00007FF7B00CF6D3 v8::ScriptCompiler::CompileFunction+1011
+23: 00007FF7B00F10B6 v8::Isolate::Initialize+662
+15: 00007FF7AF8A1DFE 
+24: 00007FF7AF8A2955 SSL_CTX_get_client_CA_list+244053
+25: 00007FF7AFC6C34B v8::RegExp::GetFlags+640235
+24: 00007FF7AFDB77DF v8::Promise::MarkAsSilent+571455
+25: 00007FF7AFB92E42 EC_KEY_METHOD_set_verify+375522
+25: 00007FF7AF499063 node::GetCurrentEnvironment+20883
+27: 00007FF7AF4AD0D2 node::GetCurrentEnvironment+102914
+24: 00007FF7AF91752B SSL_CTX_get_client_CA_list+722219
+24: 00007FF7AFA7EF86 v8::internal::Version::GetSONAME+257814
+24: 00007FF7AFB501DB EC_KEY_METHOD_set_verify+102011
+22: 00007FF7AFB7B51B EC_KEY_METHOD_set_verify+278971
+23: 00007FFC465EC48C RtlUserThreadStart+44
+24: 00007FF7AFA794BE v8::internal::Version::GetSONAME+234574
+28: 00007FF7AF2E5246 RSA_meth_get_flags+220342
+26: 00007FF7AF499063 node::GetCurrentEnvironment+20883
+24: 00007FF7AF58A22D node::SetIsolateUpForNode+749
+16: 00007FF7AF8B5361 
+25: 00007FF7AF8A1DFE SSL_CTX_get_client_CA_list+241150
+26: 00007FF7AFC760F4 v8::RegExp::GetFlags+680596
+25: 00007FF7AFDB5E73 v8::Promise::MarkAsSilent+564947
+26: 00007FF7AFB72915 EC_KEY_METHOD_set_verify+243125
+26: 00007FF7AF49780E node::GetCurrentEnvironment+14654
+28: 00007FF7AF4AD596 node::GetCurrentEnvironment+104134
+25: 00007FF7B08A684F v8::platform::DefaultJobHandle::UpdatePriority+591
+25: 00007FF7AFA79FC8 v8::internal::Version::GetSONAME+237400
+25: 00007FF7AFB4F516 EC_KEY_METHOD_set_verify+98742
+23: 00007FF7AFB7AA1A EC_KEY_METHOD_set_verify+276154
+25: 00007FF7AFA7EF86 v8::internal::Version::GetSONAME+257814
+25: 00007FF7AF2E5B73 RSA_meth_get_flags+222691
+27: 00007FF7AFB7B51B EC_KEY_METHOD_set_verify+278971
+29: 00007FF7AF58BD7B node::MultiIsolatePlatform::Create+923
+26: 00007FF7AF3CCD8E node::GetNodeReport+90334
+26: 00007FF7AFA794BE v8::internal::Version::GetSONAME+234574
+24: 00007FF7AFB6E117 EC_KEY_METHOD_set_verify+224695
+29: 00007FF7AF2EEA90 RSA_meth_get_flags+259328
+27: 00007FF7AFAB97A6 v8::String::Utf8Value::~Utf8Value+129526
+26: 00007FF7AFDAD296 v8::Promise::MarkAsSilent+529142
+27: 00000292A7DCF64D 
+26: 00007FF7AFB7A078 EC_KEY_METHOD_set_verify+273688
+27: 00007FF7AF49780E node::GetCurrentEnvironment+14654
+17: 00007FF7AF88A1C5 
+26: 00007FF7AFA79FC8 v8::internal::Version::GetSONAME+237400
+26: 00007FF7AF8B5361 SSL_CTX_get_client_CA_list+320353
+30: 00007FF7B011B1A6 uv_thread_detach+150
+28: 0000025EE5C4F64D 
+26: 00007FF7AF2E4F09 RSA_meth_get_flags+219513
+18: 00007FF7AF8A58F2 
+27: 00007FF7AF88A1C5 SSL_CTX_get_client_CA_list+143813
+28: 00007FF7AFAB8143 v8::String::Utf8Value::~Utf8Value+123795
+27: 00007FF7B004AF9F X509_STORE_set_get_issuer+270399
+28: 00007FF7AFB7AA1A EC_KEY_METHOD_set_verify+276154
+30: 00007FF7AF58BB5E node::MultiIsolatePlatform::Create+382
+27: 00007FF7B011B1A6 uv_thread_detach+150
+27: 00007FF7AFA7DC64 v8::internal::Version::GetSONAME+252916
+27: 00007FF7AFB6E090 EC_KEY_METHOD_set_verify+224560
+25: 00007FF7AFB6D2E4 EC_KEY_METHOD_set_verify+221060
+27: 00007FF7AFA794BE v8::internal::Version::GetSONAME+234574
+28: 00007FF7B00418B8 X509_STORE_set_get_issuer+231768
+28: 00007FF7B137B0B3 v8::base::UnsignedDivisionByConstant<unsigned __int64>+2907267
+31: 00007FF7B137B0B3 v8::base::UnsignedDivisionByConstant<unsigned __int64>+2907267
+27: 00007FF7AF2EEA90 RSA_meth_get_flags+259328
+28: 00007FF7AF8A58F2 SSL_CTX_get_client_CA_list+256242
+29: 0000018ACB7375FA 
+31: 00007FF7AF3BD221 node::GetNodeReport+25969
+28: 00007FF7AFA799B7 v8::internal::Version::GetSONAME+235847
+28: 00007FF7AFB92613 EC_KEY_METHOD_set_verify+373427
+26: 00007FF7AFB6C5D2 EC_KEY_METHOD_set_verify+217714
+19: 00007FF7AF8B6FB6 
+29: 00007FF7AFB6E117 EC_KEY_METHOD_set_verify+224695
+28: 00007FF7AFA8055E v8::internal::Version::GetSONAME+263406
+32: 00007FFC44A0E8D7 BaseThreadInitThunk+23
+28: 00007FF7B011B1A6 uv_thread_detach+150
+20: 00007FF7AF8B7DB7 
+29: 00007FF7B00410DD X509_STORE_set_get_issuer+229757
+33: 00007FFC465EC48C RtlUserThreadStart+44
+29: 00007FF7AF8B6FB6 SSL_CTX_get_client_CA_list+327606
+30: 00007FF7AFB6D2E4 EC_KEY_METHOD_set_verify+221060
+32: 00007FF7AF3C548B node::GetNodeReport+59355
+30: 00007FF7AF8B7DB7 SSL_CTX_get_client_CA_list+331191
+29: 00007FFC44A0E8D7 BaseThreadInitThunk+23
+29: 00007FF7AFA7986A v8::internal::Version::GetSONAME+235514
+29: 00007FF7AFA79D0D v8::internal::Version::GetSONAME+236701
+29: 00007FF7B137B0B3 v8::base::UnsignedDivisionByConstant<unsigned __int64>+2907267
+21: 00007FF7AF8CC18A 
+29: 00007FF7AFB72A84 EC_KEY_METHOD_set_verify+243492
+27: 00007FF7AFB6C27A EC_KEY_METHOD_set_verify+216858
+30: 00007FF7B0041B7C X509_STORE_set_get_issuer+232476
+31: 00007FF7AFB6C5D2 EC_KEY_METHOD_set_verify+217714
+33: 00007FF7AF533DE0 node::SetCppgcReference+54912
+30: 00007FFC465EC48C RtlUserThreadStart+44
+30: 00007FF7AFA76BC7 v8::internal::Version::GetSONAME+224087
+30: 00007FF7AFB7B51B EC_KEY_METHOD_set_verify+278971
+28: 00007FF7AFB678A9 EC_KEY_METHOD_set_verify+197961
+30: 00007FF7AFECEBC8 v8::base::AddressSpaceReservation::AddressSpaceReservation+354776
+30: 00007FFC44A0E8D7 BaseThreadInitThunk+23
+22: 00007FF7AF8A0DCB 
+31: 00007FF7AF8CC18A SSL_CTX_get_client_CA_list+414090
+31: 00007FF7AFAC417B v8::String::Utf8Value::~Utf8Value+173003
+34: 00007FF7AF58A85E node::CreateEnvironment+510
+31: 00007FF7AFA76B44 v8::internal::Version::GetSONAME+223956
+31: 00007FF7AFB7AA1A EC_KEY_METHOD_set_verify+276154
+29: 00007FF7B0043C4F X509_STORE_set_get_issuer+240879
+31: 00007FF7AFA581F3 v8::internal::Version::GetSONAME+98691
+31: 00007FFC465EC48C RtlUserThreadStart+44
+32: 00007FF7AFB6C27A EC_KEY_METHOD_set_verify+216858
+23: 00007FF7AF8A09A2 
+32: 00007FF7AF8A0DCB SSL_CTX_get_client_CA_list+237003
+32: 0000021A1FE775FA 
+33: 00007FF7AFB678A9 EC_KEY_METHOD_set_verify+197961
+35: 00007FF7AF2E5246 RSA_meth_get_flags+220342
+32: 00007FF7AFA87795 v8::internal::Version::GetSONAME+292645
+30: 00007FF7B0046A51 X509_STORE_set_get_issuer+252657
+32: 00007FF7AFF61BFC SSL_CTX_set_default_read_buffer_len+45500
+32: 00007FF7AFB6E117 EC_KEY_METHOD_set_verify+224695
+24: 00007FF7AF8A2955 
+33: 00007FF7AF918F36 SSL_CTX_get_client_CA_list+728886
+34: 00007FF7B0043C4F X509_STORE_set_get_issuer+240879
+36: 00007FF7AF2EEA90 RSA_meth_get_flags+259328
+33: 00007FF7B004674E X509_STORE_set_get_issuer+251886
+33: 00007FF7AFB6D2E4 EC_KEY_METHOD_set_verify+221060
+34: 00007FF7AF917C50 SSL_CTX_get_client_CA_list+724048
+35: 00007FF7B0046A51 X509_STORE_set_get_issuer+252657
+25: 00007FF7AF8A1DFE 
+34: 00007FF7AFB6C5D2 EC_KEY_METHOD_set_verify+217714
+37: 00007FF7B011B1A6 uv_thread_detach+150
+31: 00007FF7B00CF6D3 v8::ScriptCompiler::CompileFunction+1011
+34: 00007FF7B00CF6D3 v8::ScriptCompiler::CompileFunction+1011
+33: 00007FF7AFF61FF2 SSL_CTX_set_default_read_buffer_len+46514
+32: 00007FF7AF499063 node::GetCurrentEnvironment+20883
+34: 00007FF7AFA5DE33 v8::internal::Version::GetSONAME+122307
+26: 00007FF7AF8B5361 
+35: 00007FF7AF915A4A SSL_CTX_get_client_CA_list+715338
+36: 00007FF7B00CF6D3 v8::ScriptCompiler::CompileFunction+1011
+38: 00007FF7B137B0B3 v8::base::UnsignedDivisionByConstant<unsigned __int64>+2907267
+35: 00007FF7AF4AC520 node::GetCurrentEnvironment+99920
+35: 00007FF7AFB6C27A EC_KEY_METHOD_set_verify+216858
+33: 00007FF7AF49780E node::GetCurrentEnvironment+14654
+35: 00007FF7B00F10B6 v8::Isolate::Initialize+662
+27: 00007FF7AF88A1C5 
+37: 00007FF7AF499063 node::GetCurrentEnvironment+20883
+36: 00007FF7AFB678A9 EC_KEY_METHOD_set_verify+197961
+36: 00007FF7AF4AD0D2 node::GetCurrentEnvironment+102914
+36: 00007FF7B0039ECF X509_STORE_set_get_issuer+200559
+34: 000001E42FDCF64D 
+39: 00007FFC44A0E8D7 BaseThreadInitThunk+23
+36: 00007FF7AF58A22D node::SetIsolateUpForNode+749
+28: 00007FF7AF8A58F2 
+37: 00007FF7AF91752B SSL_CTX_get_client_CA_list+722219
+40: 00007FFC465EC48C RtlUserThreadStart+44
+37: 00007FF7B0043C4F X509_STORE_set_get_issuer+240879
+37: 00007FF7AF2E5B73 RSA_meth_get_flags+222691
+29: 00007FF7AF8B6FB6 
+37: 00007FF7AF4AF146 node::GetCurrentEnvironment+111222
+38: 00007FF7B08A684F v8::platform::DefaultJobHandle::UpdatePriority+591
+38: 00007FF7AF49780E node::GetCurrentEnvironment+14654
+39: 000002BDC4F4F64D 
+38: 000001F96080F64D 
+38: 00007FF7B0046A51 X509_STORE_set_get_issuer+252657
+38: 00007FF7AF2E4F09 RSA_meth_get_flags+219513
+30: 00007FF7AF8B7DB7 
+39: 00007FF7AF3CCD8E node::GetNodeReport+90334
+39: 00007FF7B00CF6D3 v8::ScriptCompiler::CompileFunction+1011
+39: 00007FF7AF2EEA90 RSA_meth_get_flags+259328
+31: 00007FF7AF8CC18A 
+40: 00007FF7B011B1A6 uv_thread_detach+150
+40: 00007FF7AF499063 node::GetCurrentEnvironment+20883
+40: 00007FF7B011B1A6 uv_thread_detach+150
+32: 00007FF7AF8A0DCB 
+41: 00007FF7B137B0B3 v8::base::UnsignedDivisionByConstant<unsigned __int64>+2907267
+41: 00007FF7B137B0B3 v8::base::UnsignedDivisionByConstant<unsigned __int64>+2907267
+33: 00007FF7AF918F36 
+41: 00007FF7AF49780E node::GetCurrentEnvironment+14654
+42: 00007FFC44A0E8D7 BaseThreadInitThunk+23
+42: 0000011237DCF64D 
+42: 00007FFC44A0E8D7 BaseThreadInitThunk+23
+34: 00007FF7AF917C50 
+43: 00007FFC465EC48C RtlUserThreadStart+44
+43: 00007FFC465EC48C RtlUserThreadStart+44
+35: 00007FF7AF915A4A 
+36: 00007FF7B0039ECF 
+37: 00007FF7AF91752B 
+38: 00007FF7B08A684F 
+39: 00007FF7AF3CCD8E 
+40: 00007FF7B011B1A6 
+41: 00007FF7B137B0B3 
+42: 00007FFC44A0E8D7 
+43: 00007FFC465EC48C 
+Error: Can't resolve 'tailwindcss' in 'c:\Users\SanjayGGouda\IEEE-PHASE-2'
+    [2m[at finishWithoutResolve (c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\enhanced-resolve\lib\Resolver.js:587:18)][0m
+    [2m[at c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\enhanced-resolve\lib\Resolver.js:679:14][0m
+    [2m[at c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\enhanced-resolve\lib\Resolver.js:740:5][0m
+    [2m[at eval (eval at create (c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\tapable\lib\HookCodeFactory.js:31:10), <anonymous>:15:1)][0m
+    [2m[at c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\enhanced-resolve\lib\Resolver.js:740:5][0m
+    [2m[at eval (eval at create (c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\tapable\lib\HookCodeFactory.js:31:10), <anonymous>:16:1)][0m
+    [2m[at c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\enhanced-resolve\lib\Resolver.js:740:5][0m
+    [2m[at eval (eval at create (c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\tapable\lib\HookCodeFactory.js:31:10), <anonymous>:15:1)][0m
+    [2m[at c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\enhanced-resolve\lib\Resolver.js:740:5][0m
+    [2m[at eval (eval at create (c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\tapable\lib\HookCodeFactory.js:31:10), <anonymous>:15:1)][0m {
+  details: "resolve 'tailwindcss' in 'c:\\Users\\SanjayGGouda\\IEEE-PHASE-2'\n" +
+    '  Parsed request is a module\n' +
+    '  No description file found in c:\\Users\\SanjayGGouda\\IEEE-PHASE-2 or above\n' +
+    '  resolve as module\n' +
+    "    c:\\Users\\SanjayGGouda\\IEEE-PHASE-2\\node_modules doesn't exist or is not a directory\n" +
+    "    c:\\Users\\SanjayGGouda\\node_modules doesn't exist or is not a directory\n" +
+    "    c:\\Users\\node_modules doesn't exist or is not a directory\n" +
+    "    c:\\node_modules doesn't exist or is not a directory"
+}
+Error: Can't resolve 'tailwindcss' in 'c:\Users\SanjayGGouda\IEEE-PHASE-2'
+    [2m[at finishWithoutResolve (c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\enhanced-resolve\lib\Resolver.js:587:18)][0m
+    [2m[at c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\enhanced-resolve\lib\Resolver.js:679:14][0m
+    [2m[at c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\enhanced-resolve\lib\Resolver.js:740:5][0m
+    [2m[at eval (eval at create (c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\tapable\lib\HookCodeFactory.js:31:10), <anonymous>:15:1)][0m
+    [2m[at c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\enhanced-resolve\lib\Resolver.js:740:5][0m
+    [2m[at eval (eval at create (c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\tapable\lib\HookCodeFactory.js:31:10), <anonymous>:16:1)][0m
+    [2m[at c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\enhanced-resolve\lib\Resolver.js:740:5][0m
+    [2m[at eval (eval at create (c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\tapable\lib\HookCodeFactory.js:31:10), <anonymous>:15:1)][0m
+    [2m[at c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\enhanced-resolve\lib\Resolver.js:740:5][0m
+    [2m[at eval (eval at create (c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\tapable\lib\HookCodeFactory.js:31:10), <anonymous>:15:1)][0m {
+  details: "resolve 'tailwindcss' in 'c:\\Users\\SanjayGGouda\\IEEE-PHASE-2'\n" +
+    '  Parsed request is a module\n' +
+    '  No description file found in c:\\Users\\SanjayGGouda\\IEEE-PHASE-2 or above\n' +
+    '  resolve as module\n' +
+    "    c:\\Users\\SanjayGGouda\\IEEE-PHASE-2\\node_modules doesn't exist or is not a directory\n" +
+    "    c:\\Users\\SanjayGGouda\\node_modules doesn't exist or is not a directory\n" +
+    "    c:\\Users\\node_modules doesn't exist or is not a directory\n" +
+    "    c:\\node_modules doesn't exist or is not a directory"
+}
+Error: Can't resolve 'tailwindcss' in 'c:\Users\SanjayGGouda\IEEE-PHASE-2'
+    [2m[at finishWithoutResolve (c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\enhanced-resolve\lib\Resolver.js:587:18)][0m
+    [2m[at c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\enhanced-resolve\lib\Resolver.js:679:14][0m
+    [2m[at c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\enhanced-resolve\lib\Resolver.js:740:5][0m
+    [2m[at eval (eval at create (c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\tapable\lib\HookCodeFactory.js:31:10), <anonymous>:15:1)][0m
+    [2m[at c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\enhanced-resolve\lib\Resolver.js:740:5][0m
+    [2m[at eval (eval at create (c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\tapable\lib\HookCodeFactory.js:31:10), <anonymous>:16:1)][0m
+    [2m[at c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\enhanced-resolve\lib\Resolver.js:740:5][0m
+    [2m[at eval (eval at create (c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\tapable\lib\HookCodeFactory.js:31:10), <anonymous>:15:1)][0m
+    [2m[at c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\enhanced-resolve\lib\Resolver.js:740:5][0m
+    [2m[at eval (eval at create (c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\tapable\lib\HookCodeFactory.js:31:10), <anonymous>:15:1)][0m {
+  details: "resolve 'tailwindcss' in 'c:\\Users\\SanjayGGouda\\IEEE-PHASE-2'\n" +
+    '  Parsed request is a module\n' +
+    '  No description file found in c:\\Users\\SanjayGGouda\\IEEE-PHASE-2 or above\n' +
+    '  resolve as module\n' +
+    "    c:\\Users\\SanjayGGouda\\IEEE-PHASE-2\\node_modules doesn't exist or is not a directory\n" +
+    "    c:\\Users\\SanjayGGouda\\node_modules doesn't exist or is not a directory\n" +
+    "    c:\\Users\\node_modules doesn't exist or is not a directory\n" +
+    "    c:\\node_modules doesn't exist or is not a directory"
+}
+Error: Can't resolve 'tailwindcss' in 'c:\Users\SanjayGGouda\IEEE-PHASE-2'
+    [2m[at finishWithoutResolve (c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\enhanced-resolve\lib\Resolver.js:587:18)][0m
+    [2m[at c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\enhanced-resolve\lib\Resolver.js:679:14][0m
+    [2m[at c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\enhanced-resolve\lib\Resolver.js:740:5][0m
+    [2m[at eval (eval at create (c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\tapable\lib\HookCodeFactory.js:31:10), <anonymous>:15:1)][0m
+    [2m[at c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\enhanced-resolve\lib\Resolver.js:740:5][0m
+    [2m[at eval (eval at create (c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\tapable\lib\HookCodeFactory.js:31:10), <anonymous>:16:1)][0m
+    [2m[at c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\enhanced-resolve\lib\Resolver.js:740:5][0m
+    [2m[at eval (eval at create (c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\tapable\lib\HookCodeFactory.js:31:10), <anonymous>:15:1)][0m
+    [2m[at c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\enhanced-resolve\lib\Resolver.js:740:5][0m
+    [2m[at eval (eval at create (c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\tapable\lib\HookCodeFactory.js:31:10), <anonymous>:15:1)][0m {
+  details: "resolve 'tailwindcss' in 'c:\\Users\\SanjayGGouda\\IEEE-PHASE-2'\n" +
+    '  Parsed request is a module\n' +
+    '  No description file found in c:\\Users\\SanjayGGouda\\IEEE-PHASE-2 or above\n' +
+    '  resolve as module\n' +
+    "    c:\\Users\\SanjayGGouda\\IEEE-PHASE-2\\node_modules doesn't exist or is not a directory\n" +
+    "    c:\\Users\\SanjayGGouda\\node_modules doesn't exist or is not a directory\n" +
+    "    c:\\Users\\node_modules doesn't exist or is not a directory\n" +
+    "    c:\\node_modules doesn't exist or is not a directory"
+}
+Error: Can't resolve 'tailwindcss' in 'c:\Users\SanjayGGouda\IEEE-PHASE-2'
+    [2m[at finishWithoutResolve (c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\enhanced-resolve\lib\Resolver.js:587:18)][0m
+    [2m[at c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\enhanced-resolve\lib\Resolver.js:679:14][0m
+    [2m[at c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\enhanced-resolve\lib\Resolver.js:740:5][0m
+    [2m[at eval (eval at create (c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\tapable\lib\HookCodeFactory.js:31:10), <anonymous>:15:1)][0m
+    [2m[at c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\enhanced-resolve\lib\Resolver.js:740:5][0m
+    [2m[at eval (eval at create (c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\tapable\lib\HookCodeFactory.js:31:10), <anonymous>:16:1)][0m
+    [2m[at c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\enhanced-resolve\lib\Resolver.js:740:5][0m
+    [2m[at eval (eval at create (c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\tapable\lib\HookCodeFactory.js:31:10), <anonymous>:15:1)][0m
+    [2m[at c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\enhanced-resolve\lib\Resolver.js:740:5][0m
+    [2m[at eval (eval at create (c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\tapable\lib\HookCodeFactory.js:31:10), <anonymous>:15:1)][0m {
+  details: "resolve 'tailwindcss' in 'c:\\Users\\SanjayGGouda\\IEEE-PHASE-2'\n" +
+    '  Parsed request is a module\n' +
+    '  No description file found in c:\\Users\\SanjayGGouda\\IEEE-PHASE-2 or above\n' +
+    '  resolve as module\n' +
+    "    c:\\Users\\SanjayGGouda\\IEEE-PHASE-2\\node_modules doesn't exist or is not a directory\n" +
+    "    c:\\Users\\SanjayGGouda\\node_modules doesn't exist or is not a directory\n" +
+    "    c:\\Users\\node_modules doesn't exist or is not a directory\n" +
+    "    c:\\node_modules doesn't exist or is not a directory"
+}
+Error: Can't resolve 'tailwindcss' in 'c:\Users\SanjayGGouda\IEEE-PHASE-2'
+    [2m[at finishWithoutResolve (c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\enhanced-resolve\lib\Resolver.js:587:18)][0m
+    [2m[at c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\enhanced-resolve\lib\Resolver.js:679:14][0m
+    [2m[at c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\enhanced-resolve\lib\Resolver.js:740:5][0m
+    [2m[at eval (eval at create (c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\tapable\lib\HookCodeFactory.js:31:10), <anonymous>:15:1)][0m
+    [2m[at c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\enhanced-resolve\lib\Resolver.js:740:5][0m
+    [2m[at eval (eval at create (c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\tapable\lib\HookCodeFactory.js:31:10), <anonymous>:16:1)][0m
+    [2m[at c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\enhanced-resolve\lib\Resolver.js:740:5][0m
+    [2m[at eval (eval at create (c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\tapable\lib\HookCodeFactory.js:31:10), <anonymous>:15:1)][0m
+    [2m[at c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\enhanced-resolve\lib\Resolver.js:740:5][0m
+    [2m[at eval (eval at create (c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\tapable\lib\HookCodeFactory.js:31:10), <anonymous>:15:1)][0m {
+  details: "resolve 'tailwindcss' in 'c:\\Users\\SanjayGGouda\\IEEE-PHASE-2'\n" +
+    '  Parsed request is a module\n' +
+    '  No description file found in c:\\Users\\SanjayGGouda\\IEEE-PHASE-2 or above\n' +
+    '  resolve as module\n' +
+    "    c:\\Users\\SanjayGGouda\\IEEE-PHASE-2\\node_modules doesn't exist or is not a directory\n" +
+    "    c:\\Users\\SanjayGGouda\\node_modules doesn't exist or is not a directory\n" +
+    "    c:\\Users\\node_modules doesn't exist or is not a directory\n" +
+    "    c:\\node_modules doesn't exist or is not a directory"
+}
+Error: Can't resolve 'tailwindcss' in 'c:\Users\SanjayGGouda\IEEE-PHASE-2'
+    [2m[at finishWithoutResolve (c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\enhanced-resolve\lib\Resolver.js:587:18)][0m
+    [2m[at c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\enhanced-resolve\lib\Resolver.js:679:14][0m
+    [2m[at c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\enhanced-resolve\lib\Resolver.js:740:5][0m
+    [2m[at eval (eval at create (c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\tapable\lib\HookCodeFactory.js:31:10), <anonymous>:15:1)][0m
+    [2m[at c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\enhanced-resolve\lib\Resolver.js:740:5][0m
+    [2m[at eval (eval at create (c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\tapable\lib\HookCodeFactory.js:31:10), <anonymous>:16:1)][0m
+    [2m[at c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\enhanced-resolve\lib\Resolver.js:740:5][0m
+    [2m[at eval (eval at create (c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\tapable\lib\HookCodeFactory.js:31:10), <anonymous>:15:1)][0m
+    [2m[at c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\enhanced-resolve\lib\Resolver.js:740:5][0m
+    [2m[at eval (eval at create (c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\tapable\lib\HookCodeFactory.js:31:10), <anonymous>:15:1)][0m {
+  details: "resolve 'tailwindcss' in 'c:\\Users\\SanjayGGouda\\IEEE-PHASE-2'\n" +
+    '  Parsed request is a module\n' +
+    '  No description file found in c:\\Users\\SanjayGGouda\\IEEE-PHASE-2 or above\n' +
+    '  resolve as module\n' +
+    "    c:\\Users\\SanjayGGouda\\IEEE-PHASE-2\\node_modules doesn't exist or is not a directory\n" +
+    "    c:\\Users\\SanjayGGouda\\node_modules doesn't exist or is not a directory\n" +
+    "    c:\\Users\\node_modules doesn't exist or is not a directory\n" +
+    "    c:\\node_modules doesn't exist or is not a directory"
+}
+Error: Can't resolve 'tailwindcss' in 'c:\Users\SanjayGGouda\IEEE-PHASE-2'
+    [2m[at finishWithoutResolve (c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\enhanced-resolve\lib\Resolver.js:587:18)][0m
+    [2m[at c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\enhanced-resolve\lib\Resolver.js:679:14][0m
+    [2m[at c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\enhanced-resolve\lib\Resolver.js:740:5][0m
+    [2m[at eval (eval at create (c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\tapable\lib\HookCodeFactory.js:31:10), <anonymous>:15:1)][0m
+    [2m[at c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\enhanced-resolve\lib\Resolver.js:740:5][0m
+    [2m[at eval (eval at create (c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\tapable\lib\HookCodeFactory.js:31:10), <anonymous>:16:1)][0m
+    [2m[at c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\enhanced-resolve\lib\Resolver.js:740:5][0m
+    [2m[at eval (eval at create (c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\tapable\lib\HookCodeFactory.js:31:10), <anonymous>:15:1)][0m
+    [2m[at c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\enhanced-resolve\lib\Resolver.js:740:5][0m
+    [2m[at eval (eval at create (c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\tapable\lib\HookCodeFactory.js:31:10), <anonymous>:15:1)][0m {
+  details: "resolve 'tailwindcss' in 'c:\\Users\\SanjayGGouda\\IEEE-PHASE-2'\n" +
+    '  Parsed request is a module\n' +
+    '  No description file found in c:\\Users\\SanjayGGouda\\IEEE-PHASE-2 or above\n' +
+    '  resolve as module\n' +
+    "    c:\\Users\\SanjayGGouda\\IEEE-PHASE-2\\node_modules doesn't exist or is not a directory\n" +
+    "    c:\\Users\\SanjayGGouda\\node_modules doesn't exist or is not a directory\n" +
+    "    c:\\Users\\node_modules doesn't exist or is not a directory\n" +
+    "    c:\\node_modules doesn't exist or is not a directory"
+}
+Error: Can't resolve 'tailwindcss' in 'c:\Users\SanjayGGouda\IEEE-PHASE-2'
+    [2m[at finishWithoutResolve (c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\enhanced-resolve\lib\Resolver.js:587:18)][0m
+    [2m[at c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\enhanced-resolve\lib\Resolver.js:679:14][0m
+    [2m[at c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\enhanced-resolve\lib\Resolver.js:740:5][0m
+    [2m[at eval (eval at create (c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\tapable\lib\HookCodeFactory.js:31:10), <anonymous>:15:1)][0m
+    [2m[at c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\enhanced-resolve\lib\Resolver.js:740:5][0m
+    [2m[at eval (eval at create (c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\tapable\lib\HookCodeFactory.js:31:10), <anonymous>:16:1)][0m
+    [2m[at c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\enhanced-resolve\lib\Resolver.js:740:5][0m
+    [2m[at eval (eval at create (c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\tapable\lib\HookCodeFactory.js:31:10), <anonymous>:15:1)][0m
+    [2m[at c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\enhanced-resolve\lib\Resolver.js:740:5][0m
+    [2m[at eval (eval at create (c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\tapable\lib\HookCodeFactory.js:31:10), <anonymous>:15:1)][0m {
+  details: "resolve 'tailwindcss' in 'c:\\Users\\SanjayGGouda\\IEEE-PHASE-2'\n" +
+    '  Parsed request is a module\n' +
+    '  No description file found in c:\\Users\\SanjayGGouda\\IEEE-PHASE-2 or above\n' +
+    '  resolve as module\n' +
+    "    c:\\Users\\SanjayGGouda\\IEEE-PHASE-2\\node_modules doesn't exist or is not a directory\n" +
+    "    c:\\Users\\SanjayGGouda\\node_modules doesn't exist or is not a directory\n" +
+    "    c:\\Users\\node_modules doesn't exist or is not a directory\n" +
+    "    c:\\node_modules doesn't exist or is not a directory"
+}
+Error: Can't resolve 'tailwindcss' in 'c:\Users\SanjayGGouda\IEEE-PHASE-2'
+    [2m[at finishWithoutResolve (c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\enhanced-resolve\lib\Resolver.js:587:18)][0m
+    [2m[at c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\enhanced-resolve\lib\Resolver.js:679:14][0m
+    [2m[at c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\enhanced-resolve\lib\Resolver.js:740:5][0m
+    [2m[at eval (eval at create (c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\tapable\lib\HookCodeFactory.js:31:10), <anonymous>:15:1)][0m
+    [2m[at c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\enhanced-resolve\lib\Resolver.js:740:5][0m
+    [2m[at eval (eval at create (c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\tapable\lib\HookCodeFactory.js:31:10), <anonymous>:16:1)][0m
+    [2m[at c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\enhanced-resolve\lib\Resolver.js:740:5][0m
+    [2m[at eval (eval at create (c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\tapable\lib\HookCodeFactory.js:31:10), <anonymous>:15:1)][0m
+    [2m[at c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\enhanced-resolve\lib\Resolver.js:740:5][0m
+    [2m[at eval (eval at create (c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\tapable\lib\HookCodeFactory.js:31:10), <anonymous>:15:1)][0m {
+  details: "resolve 'tailwindcss' in 'c:\\Users\\SanjayGGouda\\IEEE-PHASE-2'\n" +
+    '  Parsed request is a module\n' +
+    '  No description file found in c:\\Users\\SanjayGGouda\\IEEE-PHASE-2 or above\n' +
+    '  resolve as module\n' +
+    "    c:\\Users\\SanjayGGouda\\IEEE-PHASE-2\\node_modules doesn't exist or is not a directory\n" +
+    "    c:\\Users\\SanjayGGouda\\node_modules doesn't exist or is not a directory\n" +
+    "    c:\\Users\\node_modules doesn't exist or is not a directory\n" +
+    "    c:\\node_modules doesn't exist or is not a directory"
+}
+Error: Can't resolve 'tailwindcss' in 'c:\Users\SanjayGGouda\IEEE-PHASE-2'
+    [2m[at finishWithoutResolve (c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\enhanced-resolve\lib\Resolver.js:587:18)][0m
+    [2m[at c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\enhanced-resolve\lib\Resolver.js:679:14][0m
+    [2m[at c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\enhanced-resolve\lib\Resolver.js:740:5][0m
+    [2m[at eval (eval at create (c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\tapable\lib\HookCodeFactory.js:31:10), <anonymous>:15:1)][0m
+    [2m[at c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\enhanced-resolve\lib\Resolver.js:740:5][0m
+    [2m[at eval (eval at create (c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\tapable\lib\HookCodeFactory.js:31:10), <anonymous>:16:1)][0m
+    [2m[at c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\enhanced-resolve\lib\Resolver.js:740:5][0m
+    [2m[at eval (eval at create (c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\tapable\lib\HookCodeFactory.js:31:10), <anonymous>:15:1)][0m
+    [2m[at c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\enhanced-resolve\lib\Resolver.js:740:5][0m
+    [2m[at eval (eval at create (c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\tapable\lib\HookCodeFactory.js:31:10), <anonymous>:15:1)][0m {
+  details: "resolve 'tailwindcss' in 'c:\\Users\\SanjayGGouda\\IEEE-PHASE-2'\n" +
+    '  Parsed request is a module\n' +
+    '  No description file found in c:\\Users\\SanjayGGouda\\IEEE-PHASE-2 or above\n' +
+    '  resolve as module\n' +
+    "    c:\\Users\\SanjayGGouda\\IEEE-PHASE-2\\node_modules doesn't exist or is not a directory\n" +
+    "    c:\\Users\\SanjayGGouda\\node_modules doesn't exist or is not a directory\n" +
+    "    c:\\Users\\node_modules doesn't exist or is not a directory\n" +
+    "    c:\\node_modules doesn't exist or is not a directory"
+}
+Error: Can't resolve 'tailwindcss' in 'c:\Users\SanjayGGouda\IEEE-PHASE-2'
+    [2m[at finishWithoutResolve (c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\enhanced-resolve\lib\Resolver.js:587:18)][0m
+    [2m[at c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\enhanced-resolve\lib\Resolver.js:679:14][0m
+    [2m[at c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\enhanced-resolve\lib\Resolver.js:740:5][0m
+    [2m[at eval (eval at create (c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\tapable\lib\HookCodeFactory.js:31:10), <anonymous>:15:1)][0m
+    [2m[at c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\enhanced-resolve\lib\Resolver.js:740:5][0m
+    [2m[at eval (eval at create (c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\tapable\lib\HookCodeFactory.js:31:10), <anonymous>:16:1)][0m
+    [2m[at c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\enhanced-resolve\lib\Resolver.js:740:5][0m
+    [2m[at eval (eval at create (c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\tapable\lib\HookCodeFactory.js:31:10), <anonymous>:15:1)][0m
+    [2m[at c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\enhanced-resolve\lib\Resolver.js:740:5][0m
+    [2m[at eval (eval at create (c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\tapable\lib\HookCodeFactory.js:31:10), <anonymous>:15:1)][0m {
+  details: "resolve 'tailwindcss' in 'c:\\Users\\SanjayGGouda\\IEEE-PHASE-2'\n" +
+    '  Parsed request is a module\n' +
+    '  No description file found in c:\\Users\\SanjayGGouda\\IEEE-PHASE-2 or above\n' +
+    '  resolve as module\n' +
+    "    c:\\Users\\SanjayGGouda\\IEEE-PHASE-2\\node_modules doesn't exist or is not a directory\n" +
+    "    c:\\Users\\SanjayGGouda\\node_modules doesn't exist or is not a directory\n" +
+    "    c:\\Users\\node_modules doesn't exist or is not a directory\n" +
+    "    c:\\node_modules doesn't exist or is not a directory"
+}
+Error: Can't resolve 'tailwindcss' in 'c:\Users\SanjayGGouda\IEEE-PHASE-2'
+    [2m[at finishWithoutResolve (c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\enhanced-resolve\lib\Resolver.js:587:18)][0m
+    [2m[at c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\enhanced-resolve\lib\Resolver.js:679:14][0m
+    [2m[at c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\enhanced-resolve\lib\Resolver.js:740:5][0m
+    [2m[at eval (eval at create (c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\tapable\lib\HookCodeFactory.js:31:10), <anonymous>:15:1)][0m
+    [2m[at c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\enhanced-resolve\lib\Resolver.js:740:5][0m
+    [2m[at eval (eval at create (c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\tapable\lib\HookCodeFactory.js:31:10), <anonymous>:16:1)][0m
+    [2m[at c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\enhanced-resolve\lib\Resolver.js:740:5][0m
+    [2m[at eval (eval at create (c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\tapable\lib\HookCodeFactory.js:31:10), <anonymous>:15:1)][0m
+    [2m[at c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\enhanced-resolve\lib\Resolver.js:740:5][0m
+    [2m[at eval (eval at create (c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\tapable\lib\HookCodeFactory.js:31:10), <anonymous>:15:1)][0m {
+  details: "resolve 'tailwindcss' in 'c:\\Users\\SanjayGGouda\\IEEE-PHASE-2'\n" +
+    '  Parsed request is a module\n' +
+    '  No description file found in c:\\Users\\SanjayGGouda\\IEEE-PHASE-2 or above\n' +
+    '  resolve as module\n' +
+    "    c:\\Users\\SanjayGGouda\\IEEE-PHASE-2\\node_modules doesn't exist or is not a directory\n" +
+    "    c:\\Users\\SanjayGGouda\\node_modules doesn't exist or is not a directory\n" +
+    "    c:\\Users\\node_modules doesn't exist or is not a directory\n" +
+    "    c:\\node_modules doesn't exist or is not a directory"
+}
+Error: Can't resolve 'tailwindcss' in 'c:\Users\SanjayGGouda\IEEE-PHASE-2'
+    [2m[at finishWithoutResolve (c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\enhanced-resolve\lib\Resolver.js:587:18)][0m
+    [2m[at c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\enhanced-resolve\lib\Resolver.js:679:14][0m
+    [2m[at c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\enhanced-resolve\lib\Resolver.js:740:5][0m
+    [2m[at eval (eval at create (c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\tapable\lib\HookCodeFactory.js:31:10), <anonymous>:15:1)][0m
+    [2m[at c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\enhanced-resolve\lib\Resolver.js:740:5][0m
+    [2m[at eval (eval at create (c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\tapable\lib\HookCodeFactory.js:31:10), <anonymous>:16:1)][0m
+    [2m[at c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\enhanced-resolve\lib\Resolver.js:740:5][0m
+    [2m[at eval (eval at create (c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\tapable\lib\HookCodeFactory.js:31:10), <anonymous>:15:1)][0m
+    [2m[at c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\enhanced-resolve\lib\Resolver.js:740:5][0m
+    [2m[at eval (eval at create (c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\tapable\lib\HookCodeFactory.js:31:10), <anonymous>:15:1)][0m {
+  details: "resolve 'tailwindcss' in 'c:\\Users\\SanjayGGouda\\IEEE-PHASE-2'\n" +
+    '  Parsed request is a module\n' +
+    '  No description file found in c:\\Users\\SanjayGGouda\\IEEE-PHASE-2 or above\n' +
+    '  resolve as module\n' +
+    "    c:\\Users\\SanjayGGouda\\IEEE-PHASE-2\\node_modules doesn't exist or is not a directory\n" +
+    "    c:\\Users\\SanjayGGouda\\node_modules doesn't exist or is not a directory\n" +
+    "    c:\\Users\\node_modules doesn't exist or is not a directory\n" +
+    "    c:\\node_modules doesn't exist or is not a directory"
+}
+Error: Can't resolve 'tailwindcss' in 'c:\Users\SanjayGGouda\IEEE-PHASE-2'
+    [2m[at finishWithoutResolve (c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\enhanced-resolve\lib\Resolver.js:587:18)][0m
+    [2m[at c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\enhanced-resolve\lib\Resolver.js:679:14][0m
+    [2m[at c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\enhanced-resolve\lib\Resolver.js:740:5][0m
+    [2m[at eval (eval at create (c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\tapable\lib\HookCodeFactory.js:31:10), <anonymous>:15:1)][0m
+    [2m[at c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\enhanced-resolve\lib\Resolver.js:740:5][0m
+    [2m[at eval (eval at create (c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\tapable\lib\HookCodeFactory.js:31:10), <anonymous>:16:1)][0m
+    [2m[at c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\enhanced-resolve\lib\Resolver.js:740:5][0m
+    [2m[at eval (eval at create (c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\tapable\lib\HookCodeFactory.js:31:10), <anonymous>:15:1)][0m
+    [2m[at c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\enhanced-resolve\lib\Resolver.js:740:5][0m
+    [2m[at eval (eval at create (c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\tapable\lib\HookCodeFactory.js:31:10), <anonymous>:15:1)][0m {
+  details: "resolve 'tailwindcss' in 'c:\\Users\\SanjayGGouda\\IEEE-PHASE-2'\n" +
+    '  Parsed request is a module\n' +
+    '  No description file found in c:\\Users\\SanjayGGouda\\IEEE-PHASE-2 or above\n' +
+    '  resolve as module\n' +
+    "    c:\\Users\\SanjayGGouda\\IEEE-PHASE-2\\node_modules doesn't exist or is not a directory\n" +
+    "    c:\\Users\\SanjayGGouda\\node_modules doesn't exist or is not a directory\n" +
+    "    c:\\Users\\node_modules doesn't exist or is not a directory\n" +
+    "    c:\\node_modules doesn't exist or is not a directory"
+}
+Error: Can't resolve 'tailwindcss' in 'c:\Users\SanjayGGouda\IEEE-PHASE-2'
+    [2m[at finishWithoutResolve (c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\enhanced-resolve\lib\Resolver.js:587:18)][0m
+    [2m[at c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\enhanced-resolve\lib\Resolver.js:679:14][0m
+    [2m[at c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\enhanced-resolve\lib\Resolver.js:740:5][0m
+    [2m[at eval (eval at create (c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\tapable\lib\HookCodeFactory.js:31:10), <anonymous>:15:1)][0m
+    [2m[at c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\enhanced-resolve\lib\Resolver.js:740:5][0m
+    [2m[at eval (eval at create (c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\tapable\lib\HookCodeFactory.js:31:10), <anonymous>:16:1)][0m
+    [2m[at c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\enhanced-resolve\lib\Resolver.js:740:5][0m
+    [2m[at eval (eval at create (c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\tapable\lib\HookCodeFactory.js:31:10), <anonymous>:15:1)][0m
+    [2m[at c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\enhanced-resolve\lib\Resolver.js:740:5][0m
+    [2m[at eval (eval at create (c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\tapable\lib\HookCodeFactory.js:31:10), <anonymous>:15:1)][0m {
+  details: "resolve 'tailwindcss' in 'c:\\Users\\SanjayGGouda\\IEEE-PHASE-2'\n" +
+    '  Parsed request is a module\n' +
+    '  No description file found in c:\\Users\\SanjayGGouda\\IEEE-PHASE-2 or above\n' +
+    '  resolve as module\n' +
+    "    c:\\Users\\SanjayGGouda\\IEEE-PHASE-2\\node_modules doesn't exist or is not a directory\n" +
+    "    c:\\Users\\SanjayGGouda\\node_modules doesn't exist or is not a directory\n" +
+    "    c:\\Users\\node_modules doesn't exist or is not a directory\n" +
+    "    c:\\node_modules doesn't exist or is not a directory"
+}
+Error: Can't resolve 'tailwindcss' in 'c:\Users\SanjayGGouda\IEEE-PHASE-2'
+    [2m[at finishWithoutResolve (c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\enhanced-resolve\lib\Resolver.js:587:18)][0m
+    [2m[at c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\enhanced-resolve\lib\Resolver.js:679:14][0m
+    [2m[at c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\enhanced-resolve\lib\Resolver.js:740:5][0m
+    [2m[at eval (eval at create (c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\tapable\lib\HookCodeFactory.js:31:10), <anonymous>:15:1)][0m
+    [2m[at c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\enhanced-resolve\lib\Resolver.js:740:5][0m
+    [2m[at eval (eval at create (c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\tapable\lib\HookCodeFactory.js:31:10), <anonymous>:16:1)][0m
+    [2m[at c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\enhanced-resolve\lib\Resolver.js:740:5][0m
+    [2m[at eval (eval at create (c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\tapable\lib\HookCodeFactory.js:31:10), <anonymous>:15:1)][0m
+    [2m[at c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\enhanced-resolve\lib\Resolver.js:740:5][0m
+    [2m[at eval (eval at create (c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\tapable\lib\HookCodeFactory.js:31:10), <anonymous>:15:1)][0m {
+  details: "resolve 'tailwindcss' in 'c:\\Users\\SanjayGGouda\\IEEE-PHASE-2'\n" +
+    '  Parsed request is a module\n' +
+    '  No description file found in c:\\Users\\SanjayGGouda\\IEEE-PHASE-2 or above\n' +
+    '  resolve as module\n' +
+    "    c:\\Users\\SanjayGGouda\\IEEE-PHASE-2\\node_modules doesn't exist or is not a directory\n" +
+    "    c:\\Users\\SanjayGGouda\\node_modules doesn't exist or is not a directory\n" +
+    "    c:\\Users\\node_modules doesn't exist or is not a directory\n" +
+    "    c:\\node_modules doesn't exist or is not a directory"
+}
+
+thread 'tokio-runtime-worker' (16068) panicked at C:\actions-runner\svc-home\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\tokio-1.43.0\src\io\blocking.rs:76:46:
+OS can't spawn worker thread: Insufficient system resources exist to complete the requested service. (os error 1450)
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+
+
+
+
+
+#
+
+
+
+
+# Fatal process out of memory: Re-embedded builtins: set permissions
+#
+#
+#
+#
+# Fatal process out of memory: Re-embedded builtins: set permissions
+# Fatal process out of memory: Re-embedded builtins: set permissions
+#
+# Fatal process out of memory: Re-embedded builtins: set permissions
+# Fatal process out of memory: Re-embedded builtins: set permissions
+----- Native stack trace -----
+#
+#
+
+#
+----- Native stack trace -----
+#
+----- Native stack trace -----
+----- Native stack trace -----
+
+----- Native stack trace -----
+
+
+
+ 1: 00007FF7AF3D0ECD node::MultiIsolatePlatform::DisposeIsolate+5341
+ 1: 00007FF7AF3D0ECD node::MultiIsolatePlatform::DisposeIsolate+5341
+ 1: 00007FF7AF3D0ECD node::MultiIsolatePlatform::DisposeIsolate+5341
+ 1: 00007FF7AF3D0ECD node::MultiIsolatePlatform::DisposeIsolate+5341
+ 1: 00007FF7AF3D0ECD node::MultiIsolatePlatform::DisposeIsolate+5341
+ 2: 00007FF7B08336B6 v8::base::FatalOOM+54
+ 2: 00007FF7B08336B6 v8::base::FatalOOM+54
+ 2: 00007FF7B08336B6 v8::base::FatalOOM+54
+ 2: 00007FF7B08336B6 v8::base::FatalOOM+54
+ 3: 00007FF7B00C61F6 v8::Function::NewInstance+390
+ 2: 00007FF7B08336B6 v8::base::FatalOOM+54
+ 3: 00007FF7B00C61F6 v8::Function::NewInstance+390
+ 3: 00007FF7B00C61F6 v8::Function::NewInstance+390
+ 4: 00007FF7AFF2D52E v8::CppHeap::CollectGarbageInYoungGenerationForTesting+111438
+ 3: 00007FF7B00C61F6 v8::Function::NewInstance+390
+ 3: 00007FF7B00C61F6 v8::Function::NewInstance+390
+ 4: 00007FF7AFF2D52E v8::CppHeap::CollectGarbageInYoungGenerationForTesting+111438
+ 4: 00007FF7AFF2D52E v8::CppHeap::CollectGarbageInYoungGenerationForTesting+111438
+ 4: 00007FF7AFF2D52E v8::CppHeap::CollectGarbageInYoungGenerationForTesting+111438
+ 5: 00007FF7AFF60B5F SSL_CTX_set_default_read_buffer_len+41247
+ 4: 00007FF7AFF2D52E v8::CppHeap::CollectGarbageInYoungGenerationForTesting+111438
+ 5: 00007FF7AFF60B5F SSL_CTX_set_default_read_buffer_len+41247
+ 5: 00007FF7AFF60B5F SSL_CTX_set_default_read_buffer_len+41247
+ 5: 00007FF7AFF60B5F SSL_CTX_set_default_read_buffer_len+41247
+ 6: 00007FF7AFF61612 SSL_CTX_set_default_read_buffer_len+43986
+ 5: 00007FF7AFF60B5F SSL_CTX_set_default_read_buffer_len+41247
+ 6: 00007FF7AFF61612 SSL_CTX_set_default_read_buffer_len+43986
+ 6: 00007FF7AFF61612 SSL_CTX_set_default_read_buffer_len+43986
+ 6: 00007FF7AFF61612 SSL_CTX_set_default_read_buffer_len+43986
+ 7: 00007FF7AFF61FF2 SSL_CTX_set_default_read_buffer_len+46514
+ 6: 00007FF7AFF61612 SSL_CTX_set_default_read_buffer_len+43986
+ 7: 00007FF7AFF61FF2 SSL_CTX_set_default_read_buffer_len+46514
+ 7: 00007FF7AFF61FF2 SSL_CTX_set_default_read_buffer_len+46514
+ 7: 00007FF7AFF61FF2 SSL_CTX_set_default_read_buffer_len+46514
+ 8: 00007FF7AFA5DE33 v8::internal::Version::GetSONAME+122307
+ 7: 00007FF7AFF61FF2 SSL_CTX_set_default_read_buffer_len+46514
+ 8: 00007FF7AFA5DE33 v8::internal::Version::GetSONAME+122307
+ 8: 00007FF7AFA5DE33 v8::internal::Version::GetSONAME+122307
+ 8: 00007FF7AFA5DE33 v8::internal::Version::GetSONAME+122307
+ 8: 00007FF7AFA5DE33 v8::internal::Version::GetSONAME+122307
+ 9: 00007FF7B00F10B6 v8::Isolate::Initialize+662
+ 9: 00007FF7B00F10B6 v8::Isolate::Initialize+662
+ 9: 00007FF7B00F10B6 v8::Isolate::Initialize+662
+ 9: 00007FF7B00F10B6 v8::Isolate::Initialize+662
+10: 00007FF7AF58A22D node::SetIsolateUpForNode+749
+ 9: 00007FF7B00F10B6 v8::Isolate::Initialize+662
+10: 00007FF7AF58A22D node::SetIsolateUpForNode+749
+10: 00007FF7AF58A22D node::SetIsolateUpForNode+749
+11: 00007FF7AF2E5B73 RSA_meth_get_flags+222691
+10: 00007FF7AF58A22D node::SetIsolateUpForNode+749
+10: 00007FF7AF58A22D node::SetIsolateUpForNode+749
+11: 00007FF7AF2E5B73 RSA_meth_get_flags+222691
+11: 00007FF7AF2E5B73 RSA_meth_get_flags+222691
+11: 00007FF7AF2E5B73 RSA_meth_get_flags+222691
+12: 00007FF7AF2E4F09 RSA_meth_get_flags+219513
+11: 00007FF7AF2E5B73 RSA_meth_get_flags+222691
+12: 00007FF7AF2E4F09 RSA_meth_get_flags+219513
+13: 00007FF7AF2EEA90 RSA_meth_get_flags+259328
+12: 00007FF7AF2E4F09 RSA_meth_get_flags+219513
+12: 00007FF7AF2E4F09 RSA_meth_get_flags+219513
+12: 00007FF7AF2E4F09 RSA_meth_get_flags+219513
+13: 00007FF7AF2EEA90 RSA_meth_get_flags+259328
+13: 00007FF7AF2EEA90 RSA_meth_get_flags+259328
+13: 00007FF7AF2EEA90 RSA_meth_get_flags+259328
+14: 00007FF7B011B1A6 uv_thread_detach+150
+13: 00007FF7AF2EEA90 RSA_meth_get_flags+259328
+14: 00007FF7B011B1A6 uv_thread_detach+150
+14: 00007FF7B011B1A6 uv_thread_detach+150
+14: 00007FF7B011B1A6 uv_thread_detach+150
+14: 00007FF7B011B1A6 uv_thread_detach+150
+15: 00007FF7B137B0B3 v8::base::UnsignedDivisionByConstant<unsigned __int64>+2907267
+15: 00007FF7B137B0B3 v8::base::UnsignedDivisionByConstant<unsigned __int64>+2907267
+15: 00007FF7B137B0B3 v8::base::UnsignedDivisionByConstant<unsigned __int64>+2907267
+15: 00007FF7B137B0B3 v8::base::UnsignedDivisionByConstant<unsigned __int64>+2907267
+16: 00007FFC44A0E8D7 BaseThreadInitThunk+23
+15: 00007FF7B137B0B3 v8::base::UnsignedDivisionByConstant<unsigned __int64>+2907267
+16: 00007FFC44A0E8D7 BaseThreadInitThunk+23
+16: 00007FFC44A0E8D7 BaseThreadInitThunk+23
+16: 00007FFC44A0E8D7 BaseThreadInitThunk+23
+17: 00007FFC465EC48C RtlUserThreadStart+44
+16: 00007FFC44A0E8D7 BaseThreadInitThunk+23
+17: 00007FFC465EC48C RtlUserThreadStart+44
+17: 00007FFC465EC48C RtlUserThreadStart+44
+17: 00007FFC465EC48C RtlUserThreadStart+44
+17: 00007FFC465EC48C RtlUserThreadStart+44
+ POST /api/auth/_log 200 in 3.5min
+ POST /api/auth/_log 200 in 3.5min
+Error: spawn UNKNOWN
+    at ignore-listed frames {
+  errno: -4094,
+  code: 'UNKNOWN',
+  syscall: 'spawn'
+}
+⨯ uncaughtException: Error: spawn UNKNOWN
+    at ignore-listed frames {
+  errno: -4094,
+  code: 'UNKNOWN',
+  syscall: 'spawn'
+}
+⨯ uncaughtException:  Error: spawn UNKNOWN
+    at ignore-listed frames {
+  errno: -4094,
+  code: 'UNKNOWN',
+  syscall: 'spawn'
+}
+Error: Can't resolve 'tailwindcss' in 'c:\Users\SanjayGGouda\IEEE-PHASE-2'
+    [2m[at finishWithoutResolve (c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\enhanced-resolve\lib\Resolver.js:587:18)][0m
+    [2m[at c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\enhanced-resolve\lib\Resolver.js:679:14][0m
+    [2m[at c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\enhanced-resolve\lib\Resolver.js:740:5][0m
+    [2m[at eval (eval at create (c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\tapable\lib\HookCodeFactory.js:31:10), <anonymous>:15:1)][0m
+    [2m[at c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\enhanced-resolve\lib\Resolver.js:740:5][0m
+    [2m[at eval (eval at create (c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\tapable\lib\HookCodeFactory.js:31:10), <anonymous>:16:1)][0m
+    [2m[at c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\enhanced-resolve\lib\Resolver.js:740:5][0m
+    [2m[at eval (eval at create (c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\tapable\lib\HookCodeFactory.js:31:10), <anonymous>:15:1)][0m
+    [2m[at c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\enhanced-resolve\lib\Resolver.js:740:5][0m
+    [2m[at eval (eval at create (c:\Users\SanjayGGouda\IEEE-PHASE-2\phase-2\node_modules\tapable\lib\HookCodeFactory.js:31:10), <anonymous>:15:1)][0m {
+  details: "resolve 'tailwindcss' in 'c:\\Users\\SanjayGGouda\\IEEE-PHASE-2'\n" +
+    '  Parsed request is a module\n' +
+    '  No description file found in c:\\Users\\SanjayGGouda\\IEEE-PHASE-2 or above\n' +
+    '  resolve as module\n' +
+    "    c:\\Users\\SanjayGGouda\\IEEE-PHASE-2\\node_modules doesn't exist or is not a directory\n" +
+    "    c:\\Users\\SanjayGGouda\\node_modules doesn't exist or is not a directory\n" +
+    "    c:\\Users\\node_modules doesn't exist or is not a directory\n" +
+    "    c:\\node_modules doesn't exist or is not a directory"
+}
+
+thread '<unnamed>' panicked at C:\Users\runneradmin\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\rayon-core-1.12.1\src\registry.rs:168:10:
+The global thread pool has not been initialized.: ThreadPoolBuildError { kind: IOError(Os { code: 1450, kind: Uncategorized, message: "Insufficient system resources exist to complete the requested service." }) }
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+[?25h
