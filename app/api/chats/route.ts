@@ -60,6 +60,7 @@ export async function GET(req: NextRequest) {
       return {
         id: chat.id,
         title: chat.title,
+        chatbotId: chat.chatbotId ?? undefined,
         mode: chat.mode ?? undefined,
         selectedItem: chat.selectedItem ?? undefined,
         genieConversationId: chat.genieConversationId ?? undefined,
@@ -82,6 +83,7 @@ export async function POST(req: NextRequest) {
   const [created] = await db.insert(chats).values({
     id: body.id,
     userId: user?.id ?? null,
+    chatbotId: body.chatbotId ?? null,
     title: body.title,
     chatType: body.chatType ?? "full",
     mode: body.mode ?? null,

@@ -1,7 +1,6 @@
 "use client";
 
-import { FileText, ExternalLink, X, BookOpen, Hash } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { FileText, ExternalLink, X, BookOpen } from "lucide-react";
 import { Citation } from "@/types";
 
 interface CitationPanelProps {
@@ -15,6 +14,11 @@ function getFileName(url: string) {
   } catch { return "Source"; }
 }
 
+function getDomain(url: string) {
+  try { return new URL(url).hostname.replace("www.", ""); }
+  catch { return ""; }
+}
+
 export function CitationPanel({ citations, onClose }: CitationPanelProps) {
   const sorted = citations
     .filter((c, i, arr) => arr.findIndex((x) => x.url === c.url) === i)
@@ -22,48 +26,45 @@ export function CitationPanel({ citations, onClose }: CitationPanelProps) {
 
   return (
     <div className="flex h-full min-h-0 flex-col bg-sidebar">
+
       {/* Header */}
-      <div className="flex items-center gap-2.5 border-b border-sidebar-border px-4 py-3.5 shrink-0">
-        <div className="flex size-7 items-center justify-center rounded-lg bg-primary/10 text-primary">
-          <BookOpen className="size-3.5" />
-        </div>
+      <div className="flex items-center gap-2 border-b border-sidebar-border px-4 py-3 shrink-0">
+        <BookOpen className="size-4 text-primary shrink-0" />
         <h2 className="text-sm font-semibold text-sidebar-foreground flex-1">
           Sources
           {sorted.length > 0 && (
             <span className="ml-1.5 text-xs font-normal text-sidebar-foreground/50">
-              ({sorted.length})
+              — {sorted.length} reference{sorted.length !== 1 ? "s" : ""} found
             </span>
           )}
         </h2>
         {onClose && (
-          <Button
-            size="icon-sm"
-            variant="ghost"
+          <button
             onClick={onClose}
-            className="size-7 text-sidebar-foreground/50 hover:text-sidebar-foreground"
+            className="size-7 flex items-center justify-center rounded-md text-sidebar-foreground/40 hover:text-sidebar-foreground hover:bg-sidebar-accent transition-all"
           >
             <X className="size-3.5" />
-          </Button>
+          </button>
         )}
       </div>
 
+      {/* Content */}
       <div className="flex-1 overflow-y-auto min-h-0">
         {sorted.length === 0 ? (
           <div className="flex flex-col items-center justify-center gap-3 px-4 py-16 text-center">
-            <div className="flex size-12 items-center justify-center rounded-2xl bg-sidebar-accent">
-              <BookOpen className="size-5 text-sidebar-foreground/30" />
-            </div>
+            <BookOpen className="size-8 text-sidebar-foreground/15" />
             <div>
-              <p className="text-sm font-medium text-sidebar-foreground/70">No sources yet</p>
-              <p className="text-xs text-sidebar-foreground/40 mt-1 leading-relaxed">
-                Citations appear here as the assistant responds.
+              <p className="text-sm font-medium text-sidebar-foreground/50">No sources</p>
+              <p className="text-xs text-sidebar-foreground/30 mt-0.5">
+                Citations appear here when the assistant responds.
               </p>
             </div>
           </div>
         ) : (
-          <div className="px-4 py-4 flex flex-col gap-4">
-            {sorted.map((c) => {
+          <div className="px-3 py-3 flex flex-col gap-2">
+            {sorted.map((c, idx) => {
               const fileName = getFileName(c.url);
+              const domain = getDomain(c.url);
               const pageLabel = c.startPageNumber != null
                 ? c.startPageNumber === c.endPageNumber || !c.endPageNumber
                   ? `Page ${c.startPageNumber}`
@@ -71,48 +72,44 @@ export function CitationPanel({ citations, onClose }: CitationPanelProps) {
                 : null;
 
               return (
-                <div
+                <a
                   key={`${c.url}-${c.annotationIndex}`}
-                  className="rounded-xl border border-sidebar-border bg-sidebar-accent/40 p-3.5 flex flex-col gap-2.5 hover:border-primary/30 transition-colors"
+                  href={c.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex flex-col gap-2 rounded-xl border border-sidebar-border bg-sidebar-accent/30 p-3 hover:border-primary/30 hover:bg-sidebar-accent/60 transition-all"
                 >
-                  {/* Number + title */}
+                  {/* Index + title row */}
                   <div className="flex items-start gap-2.5 min-w-0">
-                    <div className="flex size-6 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary text-[10px] font-bold mt-0.5">
-                      {c.annotationIndex + 1}
-                    </div>
+                    <span className="flex size-5 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary text-[10px] font-bold mt-0.5 leading-none">
+                      {idx + 1}
+                    </span>
                     <div className="min-w-0 flex-1">
-                      <div className="flex items-center gap-1.5 min-w-0">
-                        <FileText className="size-3.5 shrink-0 text-sidebar-foreground/50" />
-                        <span className="text-xs font-semibold text-sidebar-foreground truncate">
-                          {c.title || fileName}
-                        </span>
+                      <p className="text-sm font-medium text-sidebar-foreground leading-snug line-clamp-2 group-hover:text-primary transition-colors">
+                        {c.title || fileName}
+                      </p>
+                      <div className="flex items-center gap-1.5 mt-0.5">
+                        {domain && (
+                          <span className="text-xs text-sidebar-foreground/40 truncate">{domain}</span>
+                        )}
+                        {pageLabel && (
+                          <>
+                            <span className="text-sidebar-foreground/20 text-xs">·</span>
+                            <span className="text-xs text-sidebar-foreground/40">{pageLabel}</span>
+                          </>
+                        )}
                       </div>
-                      {pageLabel && (
-                        <span className="text-[10px] text-sidebar-foreground/45 mt-0.5 block">
-                          {pageLabel}
-                        </span>
-                      )}
                     </div>
+                    <ExternalLink className="size-3.5 shrink-0 text-sidebar-foreground/20 group-hover:text-primary/50 transition-colors mt-0.5" />
                   </div>
 
                   {/* Snippet */}
                   {c.snippet && (
-                    <p className="text-[11px] text-sidebar-foreground/60 leading-relaxed line-clamp-3 pl-8">
+                    <p className="text-xs text-sidebar-foreground/55 leading-relaxed line-clamp-15 pl-7 border-l-2 border-sidebar-border group-hover:border-primary/20 transition-colors">
                       {c.snippet}
                     </p>
                   )}
-
-                  {/* Link */}
-                  <a
-                    href={c.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-1.5 text-xs font-medium text-primary hover:text-primary/80 transition-colors pl-8 w-fit"
-                  >
-                    <ExternalLink className="size-3" />
-                    View source
-                  </a>
-                </div>
+                </a>
               );
             })}
           </div>

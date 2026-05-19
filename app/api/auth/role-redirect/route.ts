@@ -27,5 +27,5 @@ export async function GET() {
 
   const isAdmin = roleRows.some((r) => r.name === "admin");
 
-  redirect(isAdmin ? "/admin" : "/dashboard");
+  redirect(isAdmin ? "/admin" : "/chat");
 }

@@ -4,8 +4,31 @@ import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { Chatbot } from "@/types";
 import { Button } from "@/components/ui/button";
-import { Loader2, RefreshCw, CheckCircle2, AlertCircle, Info } from "lucide-react";
+import { Loader2, RefreshCw, CheckCircle2, AlertCircle, Info, ImageIcon } from "lucide-react";
 import { fetchKAList, fetchGenieSpaces, fetchSupervisorEndpoints } from "@/lib/api";
+
+/** Resize + compress an image file to maxW×maxH, output as webp data URL */
+async function resizeLogo(file: File, maxW: number, maxH: number): Promise<string> {
+  return new Promise((resolve, reject) => {
+    const img = new Image();
+    const url = URL.createObjectURL(file);
+    img.onload = () => {
+      URL.revokeObjectURL(url);
+      const scale = Math.min(1, maxW / img.width, maxH / img.height);
+      const w = Math.round(img.width * scale);
+      const h = Math.round(img.height * scale);
+      const canvas = document.createElement("canvas");
+      canvas.width = w;
+      canvas.height = h;
+      const ctx = canvas.getContext("2d");
+      if (!ctx) return reject(new Error("Canvas not supported"));
+      ctx.drawImage(img, 0, 0, w, h);
+      resolve(canvas.toDataURL("image/webp", 0.82));
+    };
+    img.onerror = () => { URL.revokeObjectURL(url); reject(new Error("Invalid image")); };
+    img.src = url;
+  });
+}
 
 const AGENT_TYPES = [
   { value: "ka",         label: "Knowledge Assistant", description: "Query internal knowledge bases" },
@@ -55,6 +78,8 @@ export default function ChatbotForm({ chatbot }: ChatbotFormProps) {
   const [agentOptions, setAgentOptions] = useState<AgentOption[]>([]);
   const [loadingOptions, setLoadingOptions] = useState(false);
   const [loadError, setLoadError] = useState<string | null>(null);
+  const [logoProcessing, setLogoProcessing] = useState(false);
+  const [logoError, setLogoError] = useState<string | null>(null);
 
   const fetchOptions = async (agentType: string) => {
     setLoadingOptions(true);
@@ -165,14 +190,56 @@ export default function ChatbotForm({ chatbot }: ChatbotFormProps) {
 
         <div>
           <label className={labelCls}>
-            Logo URL <span className="text-muted-foreground font-normal text-xs">(optional)</span>
+            Logo <span className="text-muted-foreground font-normal text-xs">(optional · PNG or JPG · max 500 KB)</span>
           </label>
-          <input
-            className={inputCls}
-            value={form.logoUrl}
-            onChange={(e) => set("logoUrl", e.target.value)}
-            placeholder="https://..."
-          />
+          <div className="flex items-center gap-3">
+            {/* Preview */}
+            {form.logoUrl && (
+              <div className="flex size-12 shrink-0 items-center justify-center rounded-xl border border-border overflow-hidden bg-muted">
+                <img src={form.logoUrl} alt="Logo preview" className="size-full object-cover" />
+              </div>
+            )}
+            <div className="flex-1 flex flex-col gap-1.5">
+              <label className="flex items-center gap-2 cursor-pointer w-fit rounded-lg border border-border bg-muted/40 hover:bg-muted/70 px-3 py-2 text-xs font-medium text-foreground transition-colors">
+                <input
+                  type="file"
+                  accept="image/png,image/jpeg,image/webp"
+                  className="sr-only"
+                  onChange={async (e) => {
+                    const file = e.target.files?.[0];
+                    if (!file) return;
+                    if (file.size > 500 * 1024) {
+                      setLogoError("File too large — max 500 KB");
+                      return;
+                    }
+                    setLogoError(null);
+                    setLogoProcessing(true);
+                    try {
+                      const dataUrl = await resizeLogo(file, 128, 128);
+                      set("logoUrl", dataUrl);
+                    } catch {
+                      setLogoError("Failed to process image");
+                    } finally {
+                      setLogoProcessing(false);
+                      e.target.value = "";
+                    }
+                  }}
+                />
+                {logoProcessing ? <Loader2 className="size-3.5 animate-spin" /> : <ImageIcon className="size-3.5" />}
+                {form.logoUrl ? "Change logo" : "Upload logo"}
+              </label>
+              {form.logoUrl && (
+                <button
+                  type="button"
+                  onClick={() => set("logoUrl", "")}
+                  className="text-xs text-muted-foreground hover:text-destructive transition-colors w-fit"
+                >
+                  Remove
+                </button>
+              )}
+              {logoError && <p className="text-xs text-destructive">{logoError}</p>}
+            </div>
+          </div>
         </div>
       </div>
 

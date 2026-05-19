@@ -40,6 +40,8 @@ interface ChatSidebarProps {
   onDelete: (id: string) => void;
   onRename: (id: string, title: string) => void;
   chatbot?: ChatbotInfo;
+  /** Override the "Back to Dashboard" link href. Pass null to hide it. */
+  backHref?: string | null;
 }
 
 function UserFooter() {
@@ -116,7 +118,7 @@ function getDateGroup(dateStr: string): string {
 const GROUP_ORDER = ["Today", "Yesterday", "This Week", "This Month", "Older"];
 
 export function ChatSidebar({
-  chats, isLoading, activeChatId, onSelect, onCreate, onDelete, onRename, chatbot,
+  chats, isLoading, activeChatId, onSelect, onCreate, onDelete, onRename, chatbot, backHref,
 }: ChatSidebarProps) {
   const [editingId, setEditingId] = useState<string | null>(null);
   const [editValue, setEditValue] = useState("");
@@ -312,9 +314,9 @@ export function ChatSidebar({
 
       {/* ── Footer ── */}
       <SidebarFooter className="px-3 pt-2 pb-3 border-t border-sidebar-border gap-2">
-        {chatbot && (
+        {chatbot && backHref !== null && (
           <Link
-            href="/dashboard"
+            href={backHref ?? "/dashboard"}
             className="group-data-[collapsible=icon]:hidden flex items-center gap-2 rounded-lg px-2.5 py-2 text-xs font-medium text-sidebar-foreground/60 hover:text-sidebar-foreground hover:bg-sidebar-accent transition-all"
           >
             <LayoutDashboard className="size-3.5 shrink-0" />

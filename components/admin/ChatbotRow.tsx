@@ -18,6 +18,7 @@ interface ChatbotRowProps {
     description: string | null;
     agentType: string;
     agentId: string;
+    logoUrl: string | null;
     isActive: boolean;
   };
   badge: {
@@ -59,8 +60,11 @@ export function ChatbotRow({ bot, badge }: ChatbotRowProps) {
       >
         <td className="px-5 py-4">
           <div className="flex items-center gap-3">
-            <div className={cn("flex size-8 shrink-0 items-center justify-center rounded-lg border", badge.cls)}>
-              {badge.icon}
+            <div className={cn("flex size-8 shrink-0 items-center justify-center rounded-lg border overflow-hidden", badge.cls)}>
+              {bot.logoUrl
+                ? <img src={bot.logoUrl} alt={bot.name} className="size-full object-cover" />
+                : badge.icon
+              }
             </div>
             <div>
               <div className="font-semibold text-foreground text-sm">{bot.name}</div>

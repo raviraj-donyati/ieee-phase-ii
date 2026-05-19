@@ -85,6 +85,7 @@ export const ChatSchema = z.object({
   title: z.string(),
   messages: z.array(ChatMessageSchema),
   createdAt: z.string(),
+  chatbotId: z.string().optional(),
   mode: ChatModeSchema.optional(),
   selectedItem: z.string().optional(),
   genieConversationId: z.string().optional(),
