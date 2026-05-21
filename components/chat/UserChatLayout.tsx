@@ -15,9 +15,7 @@ import { useUserChats } from "@/hooks/useUserChats";
 import { readSSEStream } from "@/lib/stream-parser";
 import { invokeEndpoint } from "@/lib/api";
 import { ChatMessage, Citation, ChatMode, Chatbot, AgentSource } from "@/types";
-import {
-  isStreamingAtom, streamingMessageAtom, citationPanelOpenAtom, panelCitationsAtom,
-} from "@/lib/atoms";
+import { citationPanelOpenAtom, panelCitationsAtom } from "@/lib/atoms";
 import { UserChatWindow } from "@/components/chat/UserChatWindow";
 
 interface UserChatLayoutProps {
@@ -33,27 +31,27 @@ export function UserChatLayout({ chatbots, initialChatId }: UserChatLayoutProps)
 
   const {
     chats, isLoading, activeChat, activeChatId, setActiveChatId,
-    createChat, removeChat, renameChat, addMessage, setGenieConversationId,
+    startChat, addMessage, removeChat, renameChat, setGenieConversationId,
   } = useUserChats();
 
-  const [isStreaming, setIsStreaming] = useAtom(isStreamingAtom);
-  const [streamingMessage, setStreamingMessage] = useAtom(streamingMessageAtom);
+  // Streaming state is local — not global atoms.
+  const [isStreaming, setIsStreaming] = useState(false);
+  const [streamingMessage, setStreamingMessage] = useState<ChatMessage | null>(null);
+
+  // Citation panel stays global (shared with CitationPanel component).
   const [citationPanelOpen, setCitationPanelOpen] = useAtom(citationPanelOpenAtom);
   const [panelCitations, setPanelCitations] = useAtom(panelCitationsAtom);
 
+  // Refs so async handleSend always reads latest values without stale closures.
   const activeChatIdRef = useRef<string | null>(activeChatId);
   activeChatIdRef.current = activeChatId;
   const chatsRef = useRef(chats);
   chatsRef.current = chats;
 
-  // Sync initialChatId from URL once chats finish loading
+  // Sync initialChatId from URL once chats finish loading — runs once.
   const didSyncRef = useRef(false);
   useEffect(() => {
-    if (!initialChatId) {
-      setActiveChatId(null);
-      return;
-    }
-    if (didSyncRef.current || isLoading) return;
+    if (!initialChatId || didSyncRef.current || isLoading) return;
     didSyncRef.current = true;
     const exists = chats.find((c) => c.id === initialChatId);
     if (exists) {
@@ -64,11 +62,9 @@ export function UserChatLayout({ chatbots, initialChatId }: UserChatLayoutProps)
       }
     } else {
       window.history.replaceState(null, "", "/chat");
-      setActiveChatId(null);
     }
   }, [chats, isLoading, initialChatId, chatbots, setActiveChatId]);
 
-  // Switching chatbot only changes the selector — active chat stays the same
   const handleSwitchChatbot = useCallback((chatbotId: string) => {
     setActiveChatbotId(chatbotId);
   }, []);
@@ -79,21 +75,38 @@ export function UserChatLayout({ chatbots, initialChatId }: UserChatLayoutProps)
       const mode = activeChatbot.agentType as ChatMode;
       const endpoint = activeChatbot.agentId;
 
+      const userMessage: ChatMessage = {
+        id: uuidv4(),
+        role: "user",
+        content,
+        citations: [],
+        createdAt: new Date().toISOString(),
+      };
+
+      // Resolve or create the chat synchronously.
       let chatId = activeChatIdRef.current;
       if (!chatId) {
-        const newChat = createChat(activeChatbot.id, activeChatbot.agentType, activeChatbot.agentId);
-        chatId = newChat.id;
+        // startChat: optimistic UI update + atomic API call (chat + message in one tx).
+        chatId = startChat(userMessage, activeChatbot.id, activeChatbot.agentType, activeChatbot.agentId);
         window.history.pushState(null, "", `/chat/${chatId}`);
+      } else {
+        addMessage(chatId, userMessage);
       }
 
-      await addMessage(chatId, { id: uuidv4(), role: "user", content, citations: [], createdAt: new Date().toISOString() });
       setIsStreaming(true);
 
+      // ── Genie path ──────────────────────────────────────────────────────────
       if (mode === "genie") {
-        const placeholder: ChatMessage = { id: uuidv4(), role: "assistant", content: "", citations: [], reasoning: "", createdAt: new Date().toISOString() };
+        const placeholder: ChatMessage = {
+          id: uuidv4(), role: "assistant", content: "", citations: [], reasoning: "",
+          createdAt: new Date().toISOString(),
+        };
         setStreamingMessage(placeholder);
+
         let accContent = "", accReasoning = "", genieSql = "", genieMessageId = "", genieConversationId = "";
-        let genieTableData: ChatMessage["tableData"] = undefined, genieSuggestions: string[] = [];
+        let genieTableData: ChatMessage["tableData"] = undefined;
+        let genieSuggestions: string[] = [];
+
         try {
           const res = await fetch("/api/genie-chat", {
             method: "POST",
@@ -106,60 +119,119 @@ export function UserChatLayout({ chatbots, initialChatId }: UserChatLayoutProps)
           });
           const reader = res.body?.getReader();
           if (!reader) throw new Error("No response body");
+
           for await (const chunk of readSSEStream(reader)) {
-            if (chunk.reasoningDelta) { accReasoning += chunk.reasoningDelta; setStreamingMessage((p) => p ? { ...p, reasoning: accReasoning } : p); }
-            if (chunk.textDelta) { accContent += chunk.textDelta; setStreamingMessage((p) => p ? { ...p, content: accContent } : p); }
+            if (chunk.reasoningDelta) {
+              accReasoning += chunk.reasoningDelta;
+              setStreamingMessage((p) => p ? { ...p, reasoning: accReasoning } : p);
+            }
+            if (chunk.textDelta) {
+              accContent += chunk.textDelta;
+              setStreamingMessage((p) => p ? { ...p, content: accContent } : p);
+            }
             if (chunk.genieDone) {
               genieSql = chunk.genieDone.sql;
               genieTableData = chunk.genieDone.tableData ?? undefined;
               genieSuggestions = chunk.genieDone.suggestedQuestions;
-              if (chunk.genieDone.conversationId) { genieConversationId = chunk.genieDone.conversationId; setGenieConversationId(chatId!, chunk.genieDone.conversationId); }
+              if (chunk.genieDone.conversationId) {
+                genieConversationId = chunk.genieDone.conversationId;
+                setGenieConversationId(chatId!, chunk.genieDone.conversationId);
+              }
               if (chunk.genieDone.messageId) genieMessageId = chunk.genieDone.messageId;
             }
           }
-          await addMessage(chatId!, { ...placeholder, content: accContent, reasoning: accReasoning, sql: genieSql, tableData: genieTableData, suggestedQuestions: genieSuggestions, genieSpaceId: endpoint, genieConversationId: genieConversationId || undefined, genieMessageId: genieMessageId || undefined });
+
+          addMessage(chatId!, {
+            ...placeholder,
+            content: accContent,
+            reasoning: accReasoning,
+            sql: genieSql,
+            tableData: genieTableData,
+            suggestedQuestions: genieSuggestions,
+            genieSpaceId: endpoint,
+            genieConversationId: genieConversationId || undefined,
+            genieMessageId: genieMessageId || undefined,
+          });
         } catch (err) {
           const msg = err instanceof Error ? err.message : "Genie error";
           toast.error(msg);
-          await addMessage(chatId!, { ...placeholder, content: `Error: ${msg}` });
-        } finally { setStreamingMessage(null); setIsStreaming(false); }
+          addMessage(chatId!, { ...placeholder, content: `Error: ${msg}` });
+        } finally {
+          setStreamingMessage(null);
+          setIsStreaming(false);
+        }
         return;
       }
 
+      // ── KA / Supervisor path ─────────────────────────────────────────────────
       const conversationId = uuidv4();
       const currentChat = chatsRef.current.find((c) => c.id === chatId);
-      const history = [...(currentChat?.messages ?? []).map((m) => ({ role: m.role, content: m.content })), { role: "user", content }];
-      const assistantMsg: ChatMessage = { id: uuidv4(), role: "assistant", content: "", citations: [], reasoning: "", createdAt: new Date().toISOString() };
+      const priorMessages = (currentChat?.messages ?? []).filter((m) => m.id !== userMessage.id);
+      const history = [
+        ...priorMessages.map((m) => ({ role: m.role, content: m.content })),
+        { role: "user", content },
+      ];
+
+      const assistantMsg: ChatMessage = {
+        id: uuidv4(), role: "assistant", content: "", citations: [], reasoning: "",
+        createdAt: new Date().toISOString(),
+      };
       setStreamingMessage(assistantMsg);
+
       let accContent = "", accReasoning = "";
       const accCitations: Citation[] = [];
       const accSources: AgentSource[] = [];
+
       try {
         const res = await invokeEndpoint(endpoint, history, conversationId, chatId!);
         const reader = res.body?.getReader();
         if (!reader) throw new Error("No response body");
+
         for await (const chunk of readSSEStream(reader)) {
-          if (chunk.textDelta) { accContent += chunk.textDelta; setStreamingMessage((p) => p ? { ...p, content: accContent } : p); }
-          if (chunk.reasoningDelta) { accReasoning += chunk.reasoningDelta; setStreamingMessage((p) => p ? { ...p, reasoning: accReasoning } : p); }
-          if (chunk.citation) { accCitations.push(chunk.citation); setStreamingMessage((p) => p ? { ...p, citations: [...accCitations] } : p); }
-          if (chunk.finalText !== undefined) { accContent = chunk.finalText; setStreamingMessage((p) => p ? { ...p, content: accContent } : p); }
+          if (chunk.textDelta) {
+            accContent += chunk.textDelta;
+            setStreamingMessage((p) => p ? { ...p, content: accContent } : p);
+          }
+          if (chunk.reasoningDelta) {
+            accReasoning += chunk.reasoningDelta;
+            setStreamingMessage((p) => p ? { ...p, reasoning: accReasoning } : p);
+          }
+          if (chunk.citation) {
+            accCitations.push(chunk.citation);
+            setStreamingMessage((p) => p ? { ...p, citations: [...accCitations] } : p);
+          }
+          if (chunk.finalText !== undefined) {
+            accContent = chunk.finalText;
+            setStreamingMessage((p) => p ? { ...p, content: accContent } : p);
+          }
           if (chunk.agentSource) {
-            if (!accSources.some((s) => s.label === chunk.agentSource!.label && s.type === chunk.agentSource!.type)) {
-              accSources.push(chunk.agentSource);
-            } else if (chunk.agentSource.detail) {
-              const idx = accSources.findIndex((s) => s.label === chunk.agentSource!.label && s.type === chunk.agentSource!.type);
-              if (idx >= 0) accSources[idx] = { ...accSources[idx], detail: chunk.agentSource.detail };
+            const src = chunk.agentSource;
+            const idx = accSources.findIndex((s) => s.label === src.label && s.type === src.type);
+            if (idx === -1) {
+              accSources.push(src);
+            } else if (src.detail) {
+              accSources[idx] = { ...accSources[idx], detail: src.detail };
             }
           }
         }
-        await addMessage(chatId!, { ...assistantMsg, content: accContent, reasoning: accReasoning, citations: accCitations, agentSources: accSources.length ? accSources : undefined });
+
+        addMessage(chatId!, {
+          ...assistantMsg,
+          content: accContent,
+          reasoning: accReasoning,
+          citations: accCitations,
+          agentSources: accSources.length ? accSources : undefined,
+        });
       } catch (err) {
         const msg = err instanceof Error ? err.message : "Stream error";
         toast.error(msg);
-        await addMessage(chatId!, { ...assistantMsg, content: `Error: ${msg}` });
-      } finally { setStreamingMessage(null); setIsStreaming(false); }
+        addMessage(chatId!, { ...assistantMsg, content: `Error: ${msg}` });
+      } finally {
+        setStreamingMessage(null);
+        setIsStreaming(false);
+      }
     },
-    [activeChatbot, createChat, addMessage, setIsStreaming, setStreamingMessage, setGenieConversationId]
+    [activeChatbot, startChat, addMessage, setGenieConversationId],
   );
 
   const handleNewChat = useCallback(() => {
@@ -168,7 +240,7 @@ export function UserChatLayout({ chatbots, initialChatId }: UserChatLayoutProps)
     setCitationPanelOpen(false);
     setPanelCitations([]);
     window.history.pushState(null, "", "/chat");
-  }, [setActiveChatId, setStreamingMessage, setCitationPanelOpen, setPanelCitations]);
+  }, [setActiveChatId, setCitationPanelOpen, setPanelCitations]);
 
   const handleSelectChat = useCallback((id: string) => {
     setActiveChatId(id);

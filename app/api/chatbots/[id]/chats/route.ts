@@ -3,7 +3,7 @@ import { getServerSession } from "next-auth";
 import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 import { db } from "@/lib/db";
 import { chats, chatbots, chatbotAccess, messages, citations, messageTableData, messageFeedback, users, userRoles, roles } from "@/lib/db/schema";
-import { desc, eq, and, or } from "drizzle-orm";
+import { desc, eq, and, or, inArray } from "drizzle-orm";
 import { upsertUser } from "@/lib/db/users";
 
 async function canAccessChatbot(userId: string, roleIds: string[], chatbotId: string, isAdmin: boolean): Promise<boolean> {
@@ -42,36 +42,72 @@ export async function GET(_: NextRequest, { params }: { params: Promise<{ id: st
     .where(and(eq(chats.userId, user.id), eq(chats.chatbotId, chatbotId)))
     .orderBy(desc(chats.createdAt));
 
-  const result = await Promise.all(
-    rows.map(async (chat) => {
-      const msgs = await db.select().from(messages).where(eq(messages.chatId, chat.id)).orderBy(messages.createdAt);
-      const fullMessages = await Promise.all(
-        msgs.map(async (msg) => {
-          const cits = await db.select().from(citations).where(eq(citations.messageId, msg.id));
-          const [td] = await db.select().from(messageTableData).where(eq(messageTableData.messageId, msg.id));
-          const [fb] = await db.select().from(messageFeedback).where(eq(messageFeedback.messageId, msg.id));
-          return {
-            id: msg.id, role: msg.role, content: msg.content,
-            reasoning: msg.reasoning ?? undefined, sql: msg.sql ?? undefined,
-            suggestedQuestions: msg.suggestedQuestions ?? undefined,
-            genieSpaceId: msg.genieSpaceId ?? undefined,
-            genieConversationId: msg.genieConversationId ?? undefined,
-            genieMessageId: msg.genieMessageId ?? undefined,
-            genieFeedback: fb ? { rating: fb.rating as "up" | "down", comment: fb.comment } : undefined,
-            createdAt: msg.createdAt.toISOString(),
-            citations: cits.map((c) => ({ type: c.type as "url_citation", title: c.title, url: c.url, annotationIndex: c.annotationIndex, snippet: c.snippet ?? undefined })),
-            tableData: td ? { columns: td.columns, rows: td.rows as string[][] } : undefined,
-          };
-        })
-      );
+  if (rows.length === 0) return NextResponse.json([]);
+
+  const chatIds = rows.map((c) => c.id);
+
+  // Bulk fetch all related data — avoids N×3 queries that exhaust the connection pool.
+  const [allMessages, allCitations, allTableData, allFeedback] = await Promise.all([
+    db.select().from(messages).where(inArray(messages.chatId, chatIds)).orderBy(messages.createdAt),
+    db.select().from(citations).where(
+      inArray(citations.messageId,
+        db.select({ id: messages.id }).from(messages).where(inArray(messages.chatId, chatIds))
+      )
+    ),
+    db.select().from(messageTableData).where(
+      inArray(messageTableData.messageId,
+        db.select({ id: messages.id }).from(messages).where(inArray(messages.chatId, chatIds))
+      )
+    ),
+    db.select().from(messageFeedback).where(
+      inArray(messageFeedback.messageId,
+        db.select({ id: messages.id }).from(messages).where(inArray(messages.chatId, chatIds))
+      )
+    ),
+  ]);
+
+  // Index for O(1) lookups.
+  const citsByMsgId = new Map<string, typeof allCitations>();
+  for (const c of allCitations) {
+    const arr = citsByMsgId.get(c.messageId) ?? [];
+    arr.push(c);
+    citsByMsgId.set(c.messageId, arr);
+  }
+  const tdByMsgId = new Map(allTableData.map((td) => [td.messageId, td]));
+  const fbByMsgId = new Map(allFeedback.map((fb) => [fb.messageId, fb]));
+  const msgsByChatId = new Map<string, typeof allMessages>();
+  for (const m of allMessages) {
+    const arr = msgsByChatId.get(m.chatId) ?? [];
+    arr.push(m);
+    msgsByChatId.set(m.chatId, arr);
+  }
+
+  const result = rows.map((chat) => {
+    const msgs = msgsByChatId.get(chat.id) ?? [];
+    const fullMessages = msgs.map((msg) => {
+      const cits = citsByMsgId.get(msg.id) ?? [];
+      const td = tdByMsgId.get(msg.id);
+      const fb = fbByMsgId.get(msg.id);
       return {
-        id: chat.id, title: chat.title, mode: chat.mode ?? undefined,
-        selectedItem: chat.selectedItem ?? undefined,
-        genieConversationId: chat.genieConversationId ?? undefined,
-        createdAt: chat.createdAt.toISOString(), messages: fullMessages,
+        id: msg.id, role: msg.role, content: msg.content,
+        reasoning: msg.reasoning ?? undefined, sql: msg.sql ?? undefined,
+        suggestedQuestions: msg.suggestedQuestions ?? undefined,
+        genieSpaceId: msg.genieSpaceId ?? undefined,
+        genieConversationId: msg.genieConversationId ?? undefined,
+        genieMessageId: msg.genieMessageId ?? undefined,
+        genieFeedback: fb ? { rating: fb.rating as "up" | "down", comment: fb.comment } : undefined,
+        createdAt: msg.createdAt.toISOString(),
+        citations: cits.map((c) => ({ type: c.type as "url_citation", title: c.title, url: c.url, annotationIndex: c.annotationIndex, snippet: c.snippet ?? undefined })),
+        tableData: td ? { columns: td.columns, rows: td.rows as string[][] } : undefined,
       };
-    })
-  );
+    });
+    return {
+      id: chat.id, title: chat.title, mode: chat.mode ?? undefined,
+      selectedItem: chat.selectedItem ?? undefined,
+      genieConversationId: chat.genieConversationId ?? undefined,
+      createdAt: chat.createdAt.toISOString(), messages: fullMessages,
+    };
+  });
 
   return NextResponse.json(result);
 }

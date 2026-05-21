@@ -15,9 +15,7 @@ import { useChatbotChats } from "@/hooks/useChatbotChats";
 import { readSSEStream } from "@/lib/stream-parser";
 import { invokeEndpoint } from "@/lib/api";
 import { ChatMessage, Citation, ChatMode, Chatbot, AgentSource } from "@/types";
-import {
-  isStreamingAtom, streamingMessageAtom, citationPanelOpenAtom, panelCitationsAtom,
-} from "@/lib/atoms";
+import { citationPanelOpenAtom, panelCitationsAtom } from "@/lib/atoms";
 import { ChatbotWindow } from "@/components/chat/ChatbotWindow";
 
 interface ChatbotChatLayoutProps {
@@ -27,31 +25,37 @@ interface ChatbotChatLayoutProps {
 
 export function ChatbotChatLayout({ chatbot, initialChatId }: ChatbotChatLayoutProps) {
   const isMobile = useIsMobile(1024);
-  const { chats, isLoading, activeChat, activeChatId, setActiveChatId, createChat, removeChat, renameChat, addMessage, setGenieConversationId } =
-    useChatbotChats(chatbot.id);
+  const {
+    chats, isLoading, activeChat, activeChatId, setActiveChatId,
+    startChat, addMessage, removeChat, renameChat, setGenieConversationId,
+  } = useChatbotChats(chatbot.id);
 
   const basePath = `/c/${chatbot.id}`;
 
-  useEffect(() => {
-    if (!initialChatId) setActiveChatId(null);
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [initialChatId]);
-
+  // Once chats have loaded, sync the URL's chatId into state (one-time).
   const didSyncRef = useRef(false);
   useEffect(() => {
-    if (!initialChatId) return;
-    if (didSyncRef.current || chats.length === 0) return;
+    if (!initialChatId || didSyncRef.current || isLoading) return;
     didSyncRef.current = true;
     const exists = chats.find((c) => c.id === initialChatId);
-    if (exists) setActiveChatId(initialChatId);
-    else { window.history.replaceState(null, "", basePath); setActiveChatId(null); }
-  }, [chats, initialChatId, setActiveChatId, basePath]);
+    if (exists) {
+      setActiveChatId(initialChatId);
+    } else {
+      // Chat not found (deleted / wrong URL) — fall back to base path.
+      window.history.replaceState(null, "", basePath);
+    }
+  }, [chats, initialChatId, isLoading, setActiveChatId, basePath]);
 
-  const [isStreaming, setIsStreaming] = useAtom(isStreamingAtom);
-  const [streamingMessage, setStreamingMessage] = useAtom(streamingMessageAtom);
+  // Streaming state is local — not global atoms — so it can't leak between chatbots.
+  const [isStreaming, setIsStreaming] = useState(false);
+  const [streamingMessage, setStreamingMessage] = useState<ChatMessage | null>(null);
+
+  // Citation panel stays in global atoms (shared with the citation panel component).
   const [citationPanelOpen, setCitationPanelOpen] = useAtom(citationPanelOpenAtom);
   const [panelCitations, setPanelCitations] = useAtom(panelCitationsAtom);
 
+  // Refs so the async handleSend closure always reads the latest values without
+  // needing them in its dependency array (which would recreate it on every render).
   const activeChatIdRef = useRef<string | null>(activeChatId);
   activeChatIdRef.current = activeChatId;
   const chatsRef = useRef(chats);
@@ -62,83 +66,167 @@ export function ChatbotChatLayout({ chatbot, initialChatId }: ChatbotChatLayoutP
       const mode = chatbot.agentType as ChatMode;
       const endpoint = chatbot.agentId;
 
+      const userMessage: ChatMessage = {
+        id: uuidv4(),
+        role: "user",
+        content,
+        citations: [],
+        createdAt: new Date().toISOString(),
+      };
+
+      // Resolve or create the chat.
+      // startChat() is synchronous for the UI — it updates state and returns the
+      // new chatId immediately, then fires the atomic API call in the background.
       let chatId = activeChatIdRef.current;
       if (!chatId) {
-        const newChat = createChat();
-        chatId = newChat.id;
+        chatId = startChat(userMessage); // creates chat + persists user msg atomically
         window.history.pushState(null, "", `${basePath}/${chatId}`);
+      } else {
+        addMessage(chatId, userMessage); // chat exists — just append
       }
 
-      await addMessage(chatId, { id: uuidv4(), role: "user", content, citations: [], createdAt: new Date().toISOString() });
       setIsStreaming(true);
 
+      // ── Genie path ──────────────────────────────────────────────────────────
       if (mode === "genie") {
-        const placeholder: ChatMessage = { id: uuidv4(), role: "assistant", content: "", citations: [], reasoning: "", createdAt: new Date().toISOString() };
+        const placeholder: ChatMessage = {
+          id: uuidv4(), role: "assistant", content: "", citations: [], reasoning: "",
+          createdAt: new Date().toISOString(),
+        };
         setStreamingMessage(placeholder);
+
         let accContent = "", accReasoning = "", genieSql = "", genieMessageId = "", genieConversationId = "";
-        let genieTableData: ChatMessage["tableData"] = undefined, genieSuggestions: string[] = [];
+        let genieTableData: ChatMessage["tableData"] = undefined;
+        let genieSuggestions: string[] = [];
+
         try {
           const res = await fetch("/api/genie-chat", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ spaceId: endpoint, content, conversationId: chatsRef.current.find((c) => c.id === chatId)?.genieConversationId }),
+            body: JSON.stringify({
+              spaceId: endpoint,
+              content,
+              conversationId: chatsRef.current.find((c) => c.id === chatId)?.genieConversationId,
+            }),
           });
           const reader = res.body?.getReader();
           if (!reader) throw new Error("No response body");
+
           for await (const chunk of readSSEStream(reader)) {
-            if (chunk.reasoningDelta) { accReasoning += chunk.reasoningDelta; setStreamingMessage((p) => p ? { ...p, reasoning: accReasoning } : p); }
-            if (chunk.textDelta) { accContent += chunk.textDelta; setStreamingMessage((p) => p ? { ...p, content: accContent } : p); }
+            if (chunk.reasoningDelta) {
+              accReasoning += chunk.reasoningDelta;
+              setStreamingMessage((p) => p ? { ...p, reasoning: accReasoning } : p);
+            }
+            if (chunk.textDelta) {
+              accContent += chunk.textDelta;
+              setStreamingMessage((p) => p ? { ...p, content: accContent } : p);
+            }
             if (chunk.genieDone) {
               genieSql = chunk.genieDone.sql;
               genieTableData = chunk.genieDone.tableData ?? undefined;
               genieSuggestions = chunk.genieDone.suggestedQuestions;
-              if (chunk.genieDone.conversationId) { genieConversationId = chunk.genieDone.conversationId; setGenieConversationId(chatId!, chunk.genieDone.conversationId); }
+              if (chunk.genieDone.conversationId) {
+                genieConversationId = chunk.genieDone.conversationId;
+                setGenieConversationId(chatId!, chunk.genieDone.conversationId);
+              }
               if (chunk.genieDone.messageId) genieMessageId = chunk.genieDone.messageId;
             }
           }
-          await addMessage(chatId!, { ...placeholder, content: accContent, reasoning: accReasoning, sql: genieSql, tableData: genieTableData, suggestedQuestions: genieSuggestions, genieSpaceId: endpoint, genieConversationId: genieConversationId || undefined, genieMessageId: genieMessageId || undefined });
+
+          addMessage(chatId!, {
+            ...placeholder,
+            content: accContent,
+            reasoning: accReasoning,
+            sql: genieSql,
+            tableData: genieTableData,
+            suggestedQuestions: genieSuggestions,
+            genieSpaceId: endpoint,
+            genieConversationId: genieConversationId || undefined,
+            genieMessageId: genieMessageId || undefined,
+          });
         } catch (err) {
           const msg = err instanceof Error ? err.message : "Genie error";
           toast.error(msg);
-          await addMessage(chatId!, { ...placeholder, content: `Error: ${msg}` });
-        } finally { setStreamingMessage(null); setIsStreaming(false); }
+          addMessage(chatId!, { ...placeholder, content: `Error: ${msg}` });
+        } finally {
+          setStreamingMessage(null);
+          setIsStreaming(false);
+        }
         return;
       }
 
+      // ── KA / Supervisor path ─────────────────────────────────────────────────
       const conversationId = uuidv4();
+      // Build history. We always include the user message we just sent.
+      // For existing chats, pull prior messages from state (excluding the one we
+      // just added to avoid duplication), then append the new one at the end.
       const currentChat = chatsRef.current.find((c) => c.id === chatId);
-      const history = [...(currentChat?.messages ?? []).map((m) => ({ role: m.role, content: m.content })), { role: "user", content }];
-      const assistantMsg: ChatMessage = { id: uuidv4(), role: "assistant", content: "", citations: [], reasoning: "", createdAt: new Date().toISOString() };
+      const priorMessages = (currentChat?.messages ?? []).filter((m) => m.id !== userMessage.id);
+      const history = [
+        ...priorMessages.map((m) => ({ role: m.role, content: m.content })),
+        { role: "user", content },
+      ];
+
+      const assistantMsg: ChatMessage = {
+        id: uuidv4(), role: "assistant", content: "", citations: [], reasoning: "",
+        createdAt: new Date().toISOString(),
+      };
       setStreamingMessage(assistantMsg);
+
       let accContent = "", accReasoning = "";
       const accCitations: Citation[] = [];
       const accSources: AgentSource[] = [];
+
       try {
         const res = await invokeEndpoint(endpoint, history, conversationId, chatId!);
         const reader = res.body?.getReader();
         if (!reader) throw new Error("No response body");
+
         for await (const chunk of readSSEStream(reader)) {
-          if (chunk.textDelta) { accContent += chunk.textDelta; setStreamingMessage((p) => p ? { ...p, content: accContent } : p); }
-          if (chunk.reasoningDelta) { accReasoning += chunk.reasoningDelta; setStreamingMessage((p) => p ? { ...p, reasoning: accReasoning } : p); }
-          if (chunk.citation) { accCitations.push(chunk.citation); setStreamingMessage((p) => p ? { ...p, citations: [...accCitations] } : p); }
-          if (chunk.finalText !== undefined) { accContent = chunk.finalText; setStreamingMessage((p) => p ? { ...p, content: accContent } : p); }
+          if (chunk.textDelta) {
+            accContent += chunk.textDelta;
+            setStreamingMessage((p) => p ? { ...p, content: accContent } : p);
+          }
+          if (chunk.reasoningDelta) {
+            accReasoning += chunk.reasoningDelta;
+            setStreamingMessage((p) => p ? { ...p, reasoning: accReasoning } : p);
+          }
+          if (chunk.citation) {
+            accCitations.push(chunk.citation);
+            setStreamingMessage((p) => p ? { ...p, citations: [...accCitations] } : p);
+          }
+          if (chunk.finalText !== undefined) {
+            accContent = chunk.finalText;
+            setStreamingMessage((p) => p ? { ...p, content: accContent } : p);
+          }
           if (chunk.agentSource) {
-            if (!accSources.some((s) => s.label === chunk.agentSource!.label && s.type === chunk.agentSource!.type)) {
-              accSources.push(chunk.agentSource);
-            } else if (chunk.agentSource.detail) {
-              const idx = accSources.findIndex((s) => s.label === chunk.agentSource!.label && s.type === chunk.agentSource!.type);
-              if (idx >= 0) accSources[idx] = { ...accSources[idx], detail: chunk.agentSource.detail };
+            const src = chunk.agentSource;
+            const idx = accSources.findIndex((s) => s.label === src.label && s.type === src.type);
+            if (idx === -1) {
+              accSources.push(src);
+            } else if (src.detail) {
+              accSources[idx] = { ...accSources[idx], detail: src.detail };
             }
           }
         }
-        await addMessage(chatId!, { ...assistantMsg, content: accContent, reasoning: accReasoning, citations: accCitations, agentSources: accSources.length ? accSources : undefined });
+
+        addMessage(chatId!, {
+          ...assistantMsg,
+          content: accContent,
+          reasoning: accReasoning,
+          citations: accCitations,
+          agentSources: accSources.length ? accSources : undefined,
+        });
       } catch (err) {
         const msg = err instanceof Error ? err.message : "Stream error";
         toast.error(msg);
-        await addMessage(chatId!, { ...assistantMsg, content: `Error: ${msg}` });
-      } finally { setStreamingMessage(null); setIsStreaming(false); }
+        addMessage(chatId!, { ...assistantMsg, content: `Error: ${msg}` });
+      } finally {
+        setStreamingMessage(null);
+        setIsStreaming(false);
+      }
     },
-    [chatbot.agentType, chatbot.agentId, createChat, addMessage, setIsStreaming, setStreamingMessage, setGenieConversationId, basePath]
+    [chatbot.agentType, chatbot.agentId, startChat, addMessage, setGenieConversationId, basePath],
   );
 
   const handleNewChat = useCallback(() => {
@@ -147,7 +235,7 @@ export function ChatbotChatLayout({ chatbot, initialChatId }: ChatbotChatLayoutP
     setStreamingMessage(null);
     setCitationPanelOpen(false);
     setPanelCitations([]);
-  }, [setActiveChatId, setStreamingMessage, setCitationPanelOpen, setPanelCitations, basePath]);
+  }, [setActiveChatId, setCitationPanelOpen, setPanelCitations, basePath]);
 
   const handleSelectChat = useCallback((id: string) => {
     setActiveChatId(id);
@@ -158,8 +246,13 @@ export function ChatbotChatLayout({ chatbot, initialChatId }: ChatbotChatLayoutP
     const remaining = chats.filter((c) => c.id !== id);
     removeChat(id);
     if (activeChatId === id) {
-      if (remaining.length > 0) { setActiveChatId(remaining[0].id); window.history.pushState(null, "", `${basePath}/${remaining[0].id}`); }
-      else { setActiveChatId(null); window.history.pushState(null, "", basePath); }
+      if (remaining.length > 0) {
+        setActiveChatId(remaining[0].id);
+        window.history.pushState(null, "", `${basePath}/${remaining[0].id}`);
+      } else {
+        setActiveChatId(null);
+        window.history.pushState(null, "", basePath);
+      }
     }
   }, [removeChat, activeChatId, chats, setActiveChatId, basePath]);
 
