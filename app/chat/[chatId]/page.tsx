@@ -7,6 +7,6 @@ interface Props {
 
 export default async function ChatWithIdPage({ params }: Props) {
   const { chatId } = await params;
-  const chatbots = await getUserChatbots();
-  return <UserChatLayout chatbots={chatbots} initialChatId={chatId} />;
+  const { chatbots, isAdmin } = await getUserChatbots();
+  return <UserChatLayout chatbots={chatbots} isAdmin={isAdmin} initialChatId={chatId} />;
 }

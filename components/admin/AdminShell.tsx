@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import { signOut } from "next-auth/react";
 import {
   Bot, Users, LogOut,
-  Zap, MessageSquare, Sun, Moon,
+  Zap, MessageSquare, Sun, Moon, MessagesSquare,
 } from "lucide-react";
 import { useTheme } from "next-themes";
 import { useContext } from "react";
@@ -20,8 +20,10 @@ import { Separator } from "@/components/ui/separator";
 import { AdminHeaderContext, AdminHeaderProvider } from "@/components/admin/AdminPageHeader";
 
 const navItems = [
-  { href: "/admin/chatbots",   label: "Chatbots",   icon: Bot,             exact: false },
-  { href: "/admin/users",      label: "Users",      icon: Users,           exact: false },
+  // Chatbots and Users panels removed — chatbots are auto-discovered from Databricks,
+  // access is managed via Databricks endpoint permissions.
+  // { href: "/admin/chatbots",   label: "Chatbots",   icon: Bot,             exact: false },
+  // { href: "/admin/users",      label: "Users",      icon: Users,           exact: false },
   { href: "/admin/playground", label: "Playground", icon: MessageSquare,   exact: false },
 ];
 
@@ -89,6 +91,29 @@ function AdminShellInner({ children, user }: AdminShellProps) {
                         </SidebarMenuItem>
                       );
                     })}
+                  </SidebarMenu>
+                </SidebarGroupContent>
+              </SidebarGroup>
+
+              {/* ── My Chat ── */}
+              <SidebarGroup className="px-0 mt-1">
+                <SidebarGroupLabel className="px-2.5 pb-1.5 text-[10px] font-semibold uppercase tracking-widest text-sidebar-foreground/35 select-none">
+                  Personal
+                </SidebarGroupLabel>
+                <SidebarGroupContent>
+                  <SidebarMenu className="gap-0.5">
+                    <SidebarMenuItem>
+                      <SidebarMenuButton
+                        asChild
+                        tooltip="My Chat"
+                        className="h-9 rounded-lg px-3 font-medium transition-all duration-150 text-sidebar-foreground/60 hover:text-sidebar-foreground hover:bg-sidebar-accent border border-transparent"
+                      >
+                        <Link href="/chat">
+                          <MessagesSquare className="size-4 shrink-0 text-sidebar-foreground/50" />
+                          <span>My Chat</span>
+                        </Link>
+                      </SidebarMenuButton>
+                    </SidebarMenuItem>
                   </SidebarMenu>
                 </SidebarGroupContent>
               </SidebarGroup>

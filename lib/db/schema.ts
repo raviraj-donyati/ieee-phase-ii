@@ -138,7 +138,7 @@ export const chatbotAccess = pgTable("chatbot_access", {
 export const chats = pgTable("chats", {
   id:                   uuid("id").primaryKey(),
   userId:               uuid("user_id").references(() => users.id, { onDelete: "cascade" }),
-  chatbotId:            uuid("chatbot_id").references(() => chatbots.id, { onDelete: "cascade" }),
+  chatbotId:            text("chatbot_id"),   // endpoint name / agentId — no FK, auto-discovered from Databricks
   title:                text("title").notNull(),
   chatType:             text("chat_type").notNull().default("full"), // "full" | "user" | "chatbot"
   mode:                 text("mode"),

@@ -73,6 +73,8 @@ export async function* readSSEStream(
   // Live-streaming step tracking: stream text as it arrives, clear content on step change
   let liveStreamingStep: number | undefined;
   const classifiedSteps = new Set<number>();
+  // Track whether the final step was streamed live (so we skip re-emitting it at response.completed)
+  let finalStepStreamedLive = false;
 
   // Stepped messages sorted by step at response.completed
   const steppedMessages: Array<{ step: number; text: string }> = [];
@@ -121,8 +123,12 @@ export async function* readSSEStream(
           if (step !== undefined && liveStreamingStep !== undefined && liveStreamingStep !== step) {
             yield { finalText: "" };
             classifiedSteps.add(liveStreamingStep);
+            finalStepStreamedLive = false; // new step starting
           }
-          if (step !== undefined) liveStreamingStep = step;
+          if (step !== undefined) {
+            liveStreamingStep = step;
+            finalStepStreamedLive = true; // this step is being streamed live
+          }
           if (!firstTokenEmitted) {
             firstTokenEmitted = true;
             yield { timingLog: { label: "First token", ts: Date.now() } };
@@ -222,8 +228,11 @@ export async function* readSSEStream(
             if (clean) yield { reasoningDelta: clean + "\n" };
           }
 
-          const clean = cleanText(last.text);
-          if (clean) yield { finalText: clean };
+          // Only emit finalText if the last step was NOT already streamed live
+          if (!finalStepStreamedLive) {
+            const clean = cleanText(last.text);
+            if (clean) yield { finalText: clean };
+          }
         }
 
       } else {

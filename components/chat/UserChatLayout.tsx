@@ -21,9 +21,10 @@ import { UserChatWindow } from "@/components/chat/UserChatWindow";
 interface UserChatLayoutProps {
   chatbots: Chatbot[];
   initialChatId?: string;
+  isAdmin?: boolean;
 }
 
-export function UserChatLayout({ chatbots, initialChatId }: UserChatLayoutProps) {
+export function UserChatLayout({ chatbots, initialChatId, isAdmin = false }: UserChatLayoutProps) {
   const isMobile = useIsMobile(1024);
 
   const [activeChatbotId, setActiveChatbotId] = useState<string>(chatbots[0]?.id ?? "");
@@ -288,6 +289,7 @@ export function UserChatLayout({ chatbots, initialChatId }: UserChatLayoutProps)
             onCreate={handleNewChat}
             onDelete={handleDeleteChat}
             onRename={renameChat}
+            isAdmin={isAdmin}
           />
 
           <SidebarInset className="flex min-w-0 flex-1 flex-col overflow-hidden">

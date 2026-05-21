@@ -4,8 +4,9 @@ import { useState, useRef, useEffect, useMemo } from "react";
 import { useSession, signOut } from "next-auth/react";
 import {
   Trash2, MoreHorizontal, Pencil, LogOut,
-  Check, X, MessageSquare, Plus, Search, Brain, Sparkles, Bot, BrainCircuit,
+  Check, X, MessageSquare, Plus, Search, Brain, Sparkles, Bot, BrainCircuit, FlaskConical,
 } from "lucide-react";
+import Link from "next/link";
 import {
   Sidebar, SidebarContent, SidebarFooter, SidebarGroup,
   SidebarGroupContent, SidebarHeader,
@@ -32,9 +33,10 @@ interface UserChatSidebarProps {
   onCreate: () => void;
   onDelete: (id: string) => void;
   onRename: (id: string, title: string) => void;
+  isAdmin?: boolean;
 }
 
-function UserFooter() {
+function UserFooter({ isAdmin }: { isAdmin: boolean }) {
   const { data: session } = useSession();
   const email = session?.user?.email ?? "";
   const name = session?.user?.name ?? email;
@@ -48,7 +50,14 @@ function UserFooter() {
         {initials}
       </div>
       <div className="flex flex-col min-w-0 flex-1 group-data-[collapsible=icon]:hidden">
-        <span className="text-sm font-medium text-sidebar-foreground truncate leading-none">{name}</span>
+        <div className="flex items-center gap-1.5 min-w-0">
+          <span className="text-sm font-medium text-sidebar-foreground truncate leading-none">{name}</span>
+          {isAdmin && (
+            <span className="shrink-0 inline-flex items-center rounded px-1 py-0.5 text-[9px] font-bold uppercase tracking-wide bg-primary/15 text-primary border border-primary/25 leading-none">
+              Admin
+            </span>
+          )}
+        </div>
         <span className="text-xs text-sidebar-foreground/40 truncate mt-0.5 leading-none">{email}</span>
       </div>
       <button
@@ -84,7 +93,7 @@ function getDateGroup(dateStr: string): string {
 const GROUP_ORDER = ["Today", "Yesterday", "This week", "This month", "Older"];
 
 export function UserChatSidebar({
-  chats, chatbots, isLoading, activeChatId, onSelect, onCreate, onDelete, onRename,
+  chats, chatbots, isLoading, activeChatId, onSelect, onCreate, onDelete, onRename, isAdmin = false,
 }: UserChatSidebarProps) {
   const [editingId, setEditingId] = useState<string | null>(null);
   const [editValue, setEditValue] = useState("");
@@ -273,7 +282,16 @@ export function UserChatSidebar({
 
       {/* Footer */}
       <SidebarFooter className="px-3 py-3 border-t border-sidebar-border">
-        <UserFooter />
+        {isAdmin && (
+          <Link
+            href="/admin/playground"
+            className="group-data-[collapsible=icon]:hidden flex items-center gap-2 rounded-lg px-2.5 py-2 text-xs font-medium text-sidebar-foreground/60 hover:text-sidebar-foreground hover:bg-sidebar-accent transition-all mb-1"
+          >
+            <FlaskConical className="size-3.5 shrink-0 text-primary/60" />
+            Admin Playground
+          </Link>
+        )}
+        <UserFooter isAdmin={isAdmin} />
       </SidebarFooter>
     </Sidebar>
   );
